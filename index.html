@@ -774,10 +774,10 @@ architecture discussed in this document.</p>
               URI ownership
             </h5>
             <p>
-              <dfn>URI ownership</dfn> is a
-              relation between a URI and a social entity, such as a person,
-              organization, or specification. URI ownership gives the relevant
-              social entity certain rights, including:
+              <dfn>URI ownership</dfn> is a relation between a URI and a social
+              entity, such as a person, organization, or specification. URI
+              ownership gives the relevant social entity certain rights,
+              including:
             </p>
             <ol>
               <li>to pass on ownership of some or all owned URIs to another
@@ -788,13 +788,12 @@ architecture discussed in this document.</p>
             </ol>
             <p>
               By social convention, URI ownership is delegated from the IANA
-              URI scheme registry [[!IANASchemes]],
-              itself a social entity, to IANA-registered URI scheme
-              specifications. Some URI scheme specifications further delegate
-              ownership to subordinate registries or to other nominated owners,
-              who may further delegate ownership. In the case of a
-              specification, ownership ultimately lies with the community that
-              maintains the specification.
+              URI scheme registry [[!IANASchemes]], itself a social entity, to
+              IANA-registered URI scheme specifications. Some URI scheme
+              specifications further delegate ownership to subordinate
+              registries or to other nominated owners, who may further delegate
+              ownership. In the case of a specification, ownership ultimately
+              lies with the community that maintains the specification.
             </p>
             <p>
               The approach taken for the "http" URI scheme, for example,
@@ -803,10 +802,10 @@ architecture discussed in this document.</p>
               set of URIs with a common prefix to one particular owner. One
               consequence of this approach is the Web's heavy reliance on the
               central DNS registry. A different approach is taken by the URN
-              Syntax scheme [[!RFC2141] which delegates
-              ownership of portions of URN space to URN Namespace
-              specifications which themselves are registered in an
-              IANA-maintained registry of URN Namespace Identifiers.
+              Syntax scheme [[!RFC2141] which delegates ownership of portions
+              of URN space to URN Namespace specifications which themselves are
+              registered in an IANA-maintained registry of URN Namespace
+              Identifiers.
             </p>
             <p>
               URI owners are responsible for avoiding the assignment of
@@ -839,12 +838,11 @@ architecture discussed in this document.</p>
             <p>
               Some schemes use techniques other than delegated ownership to
               avoid collision. For example, the specification for the data URL
-              (sic) scheme [[!RFC2397]] specifies that the
-              resource identified by a data scheme URI has only one possible
-              representation. The representation data makes up the URI that
-              identifies that resource. Thus, the specification itself
-              determines how data URIs are allocated; no delegation is
-              possible.
+              (sic) scheme [[!RFC2397]] specifies that the resource identified
+              by a data scheme URI has only one possible representation. The
+              representation data makes up the URI that identifies that
+              resource. Thus, the specification itself determines how data URIs
+              are allocated; no delegation is possible.
             </p>
             <p>
               Other schemes (such as "news:comp.text.xml") rely on a social
@@ -970,8 +968,9 @@ architecture discussed in this document.</p>
             as server-side redirects to relate the two resources. The community
             benefits when the URI owner supports redirection of an aliased URI
             to the corresponding "official" URI. For more information on
-            redirection, see section 10.3, Redirection, in [[!RFC2616]]. See also [[!CHIPS]] for a discussion of
-            some best practices for server administrators.
+            redirection, see section 10.3, Redirection, in [[!RFC2616]]. See
+            also [[!CHIPS]] for a discussion of some best practices for server
+            administrators.
           </p>
         </section>
         <section id="representation-reuse">
@@ -1055,8 +1054,8 @@ architecture discussed in this document.</p>
           processes URIs of well-known schemes. Introducing a new URI scheme
           requires the development and deployment not only of client software
           to handle the scheme, but also of ancillary agents such as gateways,
-          proxies, and caches. See [[!RFC2718]] for other
-          considerations and costs related to URI scheme design.
+          proxies, and caches. See [[!RFC2718]] for other considerations and
+          costs related to URI scheme design.
         </p>
         <p>
           Because of these costs, if a URI scheme exists that meets the needs
@@ -1089,12 +1088,11 @@ architecture discussed in this document.</p>
           </h4>
           <p>
             The Internet Assigned Numbers Authority (<acronym>IANA</acronym>)
-            maintains a registry [[!IANASchemes]] of
-            mappings between URI scheme names and scheme specifications. For
-            instance, the IANA registry indicates that the "http" scheme is
-            defined in [[!RFC2616]]. The process for
-            registering a new URI scheme is defined in 
-            [[!RFC2717]].
+            maintains a registry [[!IANASchemes]] of mappings between URI
+            scheme names and scheme specifications. For instance, the IANA
+            registry indicates that the "http" scheme is defined in
+            [[!RFC2616]]. The process for registering a new URI scheme is
+            defined in [[!RFC2717]].
           </p>
           <p>
             Unregistered URI schemes SHOULD NOT be used for a number of
@@ -1347,15 +1345,15 @@ architecture discussed in this document.</p>
         </h3>
         <p>
           Agents may use a URI to access the referenced resource; this is
-          called <dfn>dereferencing the URI</dfn>.
-          Access may take many forms, including retrieving a representation of
-          the resource (for instance, by using HTTP GET or HEAD), adding or
-          modifying a representation of the resource (for instance, by using
-          HTTP POST or PUT, which in some cases may change the actual state of
-          the resource if the submitted representations are interpreted as
-          instructions to that end), and deleting some or all representations
-          of the resource (for instance, by using HTTP DELETE, which in some
-          cases may result in the deletion of the resource itself).
+          called <dfn>dereferencing the URI</dfn>. Access may take many forms,
+          including retrieving a representation of the resource (for instance,
+          by using HTTP GET or HEAD), adding or modifying a representation of
+          the resource (for instance, by using HTTP POST or PUT, which in some
+          cases may change the actual state of the resource if the submitted
+          representations are interpreted as instructions to that end), and
+          deleting some or all representations of the resource (for instance,
+          by using HTTP DELETE, which in some cases may result in the deletion
+          of the resource itself).
         </p>
         <p>
           There may be more than one way to access a resource for a given URI;
@@ -1364,10 +1362,11 @@ architecture discussed in this document.</p>
           of a resource, whereas a hypertext link checker might use HTTP HEAD
           on the same URI simply to establish whether a representation is
           available. Some URI schemes set expectations about available access
-          methods, others (such as the URN scheme [[!RFC2141]]) do not. Section 1.2.2 of [[!URI]] discusses the separation
-          of identification and interaction in more detail. For more
-          information about relationships between multiple access methods and
-          URI addressability, see the TAG finding <cite>"<a href=
+          methods, others (such as the URN scheme [[!RFC2141]]) do not. Section
+          1.2.2 of [[!URI]] discusses the separation of identification and
+          interaction in more detail. For more information about relationships
+          between multiple access methods and URI addressability, see the TAG
+          finding <cite>"<a href=
           "http://www.w3.org/2001/tag/doc/whenToUseGet.html">URIs,
           Addressability, and the use of HTTP GET and POST</a>"</cite>.
         </p>
@@ -1442,22 +1441,19 @@ architecture discussed in this document.</p>
             identifiers within that scheme." The URI scheme name in this
             example is "http".
             </li>
-            <li>[[!IANASchemes]] states that the "http"
-            scheme is defined by the HTTP/1.1 specification (RFC 2616
-              [[!RFC2616]], section 3.2.2).
+            <li>[[!IANASchemes]] states that the "http" scheme is defined by
+            the HTTP/1.1 specification (RFC 2616 [[!RFC2616]], section 3.2.2).
             </li>
             <li>In this SVG context, the agent constructs an HTTP GET request
-            (per section 9.3 of [[!RFC2616]]) to retrieve
-            the representation.
+            (per section 9.3 of [[!RFC2616]]) to retrieve the representation.
             </li>
-            <li>Section 6 of [[!RFC2616]] defines how the
-            server constructs a corresponding response message, including the
-            'Content-Type' field.
+            <li>Section 6 of [[!RFC2616]] defines how the server constructs a
+            corresponding response message, including the 'Content-Type' field.
             </li>
-            <li>Section 1.4 of [[!RFC2616]] states "HTTP
-            communication usually takes place over TCP/IP connections." This
-            example addresses neither that step in the process nor other steps
-            such as Domain Name System (<acronym>DNS</acronym>) resolution.
+            <li>Section 1.4 of [[!RFC2616]] states "HTTP communication usually
+            takes place over TCP/IP connections." This example addresses
+            neither that step in the process nor other steps such as Domain
+            Name System (<acronym>DNS</acronym>) resolution.
             </li>
             <li>The agent interprets the returned representation according to
             the data format specification that corresponds to the
@@ -1620,8 +1616,7 @@ architecture discussed in this document.</p>
             passed to other systems during the process of retrieval. This means
             that some intermediaries in Web architecture (such as proxies) have
             no interaction with fragment identifiers and that redirection (in
-            HTTP [[!RFC2616]], for example) does not
-            account for fragments.
+            HTTP [[!RFC2616]], for example) does not account for fragments.
           </p>
         </section>
         <section>
@@ -1687,8 +1682,8 @@ architecture discussed in this document.</p>
             identifier semantics. When a received data format does not define
             fragment identifier semantics, the agent should not perform
             <a href="#no-silent-recovery">silent error recovery</a> unless the
-            user has given consent; see [[!CUAP]] for
-            additional suggested agent behavior in this case.
+            user has given consent; see [[!CUAP]] for additional suggested
+            agent behavior in this case.
           </p>
           <p>
             See related TAG issue <a href=
@@ -1821,8 +1816,8 @@ architecture discussed in this document.</p>
           interactions include subscribing to a newsletter, posting to a list,
           or modifying a database. <strong>Note:</strong> In this context, the
           word "unsafe" does not necessarily mean "dangerous"; the term "safe"
-          is used in section 9.1.1 of [[!RFC2616]] and
-          "unsafe" is the natural opposite.
+          is used in section 9.1.1 of [[!RFC2616]] and "unsafe" is the natural
+          opposite.
         </p>
         <div class="boxedtext">
           <p>
@@ -1929,7 +1924,8 @@ architecture discussed in this document.</p>
             has incurred an obligation on behalf of the user. For transaction
             results, HTTP allows representation providers to associate a URI
             with the results of an HTTP POST request using the
-            "Content-Location" header (described in section 14.14 of [[!RFC2616]]).
+            "Content-Location" header (described in section 14.14 of
+            [[!RFC2616]]).
           </p>
         </section>
       </section>
@@ -2045,11 +2041,11 @@ architecture discussed in this document.</p>
             persistent or that they will not be persistent.
           </p>
           <p>
-            HTTP [[!RFC2616]] has been designed to help
-            manage URI persistence. For example, HTTP redirection (using the
-            3xx response codes) permits servers to tell an agent that further
-            action needs to be taken by the agent in order to fulfill the
-            request (for example, a new URI is associated with the resource).
+            HTTP [[!RFC2616]] has been designed to help manage URI persistence.
+            For example, HTTP redirection (using the 3xx response codes)
+            permits servers to tell an agent that further action needs to be
+            taken by the agent in order to fulfill the request (for example, a
+            new URI is associated with the resource).
           </p>
           <p>
             In addition, <a href="#def-coneg">content negotiation</a> also
@@ -2174,9 +2170,9 @@ architecture discussed in this document.</p>
           expects future versions of this document to address in more detail
           the relationship between the architecture described herein, <a href=
           "http://www.w3.org/2002/ws/">Web Services</a>, peer-to-peer systems,
-          instant messaging systems (such as [[!RFC3920]]),
-          streaming audio (such as RTSP [[!RFC2326]]), and
-          voice-over-IP (such as SIP [[!RFC3261]]).
+          instant messaging systems (such as [[!RFC3920]]), streaming audio
+          (such as RTSP [[!RFC2326]]), and voice-over-IP (such as SIP
+          [[!RFC3261]]).
         </p>
       </section>
     </section>
@@ -2232,8 +2228,7 @@ architecture discussed in this document.</p>
           defined encoding as a sequence of characters. HTML, Internet e-mail,
           and all <a href="#xml-formats">XML-based formats</a> are textual.
           Increasingly, internationalized textual data formats refer to the
-          Unicode repertoire [[!UNICODE]] for character
-          definitions.
+          Unicode repertoire [[!UNICODE]] for character definitions.
         </p>
         <p>
           If a data format is textual, as defined in this section, that does
@@ -2690,9 +2685,9 @@ architecture discussed in this document.</p>
           When one resource (representation) refers to another resource with a
           URI, this constitutes a <a id="def-link"><dfn>link</dfn></a> between
           the two resources. Additional metadata may also form part of the link
-          (see [[!XLink10]], for example).
-          <strong>Note:</strong> In this document, the term "link" generally
-          means "relationship", not "physical connection".
+          (see [[!XLink10]], for example). <strong>Note:</strong> In this
+          document, the term "link" generally means "relationship", not
+          "physical connection".
         </p>
         <div class="boxedtext">
           <p>
@@ -2781,16 +2776,15 @@ architecture discussed in this document.</p>
         <p>
           Many data formats are <a id="xml-based"><dfn>XML-based</dfn></a>,
           that is to say they conform to the syntax rules defined in the XML
-          specification [[!XML10]] or [<a href=
-          "#XML11">XML11</a>]. This section discusses issues that are specific
-          to such formats. Anyone seeking guidance in this area is urged to
-          consult the "Guidelines For the Use of XML in IETF Protocols"
-          <a href="#IETFXML">[IETFXML]</a>, which contains a thorough
-          discussion of the considerations that govern whether or not XML ought
-          to be used, as well as specific guidelines on how it ought to be
-          used. While it is directed at Internet applications with specific
-          reference to protocols, the discussion is generally applicable to Web
-          scenarios as well.
+          specification [[!XML10]] or [<a href="#XML11">XML11</a>]. This
+          section discusses issues that are specific to such formats. Anyone
+          seeking guidance in this area is urged to consult the "Guidelines For
+          the Use of XML in IETF Protocols" <a href="#IETFXML">[IETFXML]</a>,
+          which contains a thorough discussion of the considerations that
+          govern whether or not XML ought to be used, as well as specific
+          guidelines on how it ought to be used. While it is directed at
+          Internet applications with specific reference to protocols, the
+          discussion is generally applicable to Web scenarios as well.
         </p>
         <p>
           The discussion here should be seen as ancillary to the content of
@@ -2844,8 +2838,8 @@ architecture discussed in this document.</p>
           <p>
             Sophisticated linking mechanisms have been invented for XML
             formats. XPointer allows links to address content that does not
-            have an explicit, named anchor. [[!XLink]] is
-            an appropriate specification for representing links in <a href=
+            have an explicit, named anchor. [[!XLink]] is an appropriate
+            specification for representing links in <a href=
             "#hypertext">hypertext</a> XML applications. XLink allows links to
             have multiple ends and to be expressed either inline or in "link
             bases" stored external to any or all of the resources identified by
@@ -3033,12 +3027,11 @@ architecture discussed in this document.</p>
           <p>
             For example, the following are examples of data formats for
             namespace documents: [[!OWL10]], [[!RDDL]], [[!XMLSCHEMA]], and
-            [[!XHTML11]]. Each of these formats meets
-            different requirements described above for satisfying the needs of
-            an agent that wants more information about the namespace. Note,
-            however, issues related to <a href="#frag-coneg">fragment
-            identifiers and content negotiation</a> if content negotiation is
-            used.
+            [[!XHTML11]]. Each of these formats meets different requirements
+            described above for satisfying the needs of an agent that wants
+            more information about the namespace. Note, however, issues related
+            to <a href="#frag-coneg">fragment identifiers and content
+            negotiation</a> if content negotiation is used.
           </p>
           <p>
             See TAG issues <a href=
