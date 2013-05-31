@@ -108,10 +108,9 @@ var respecConfig = {
         relevant RFC in future revisions.
       </p>
     </section>
-    <section>
+    <section id="principles">
       <h3>
-        <a id="principles">List of Principles, Constraints, and Good Practice
-        Notes</a>
+        List of Principles, Constraints, and Good Practice Notes&lt;
       </h3>
       <p>
         The following principles, constraints, and good practice notes are
@@ -247,24 +246,22 @@ var respecConfig = {
       </dl>
     </section>
     <hr>
-    <section>
+    <section id="intro">
       <h2>
-        <a id="intro">Introduction</a>
+        Introduction
       </h2>
       <p>
-        The <a id="def-world-wide-web"><dfn>World Wide Web</dfn></a> (<a id=
-        "def-www"><dfn><acronym>WWW</acronym></dfn></a>, or simply <a id=
-        "def-web"><dfn><acronym>Web</acronym></dfn></a>) is an information
-        space in which the items of interest, referred to as resources, are
-        identified by global identifiers called Uniform Resource Identifiers
-        (<a id="def-uri-acronym"><dfn><acronym>URI</acronym></dfn></a>).
+        The <dfn>World Wide Web</dfn> (<dfn><abbr>WWW</abbr></dfn>, or simply
+        <dfn><abbr>Web</abbr></dfn>) is an information space in which the items
+        of interest, referred to as resources, are identified by global
+        identifiers called Uniform Resource Identifiers
+        (<dfn><abbr>URI</abbr></dfn>).
       </p>
       <p>
-        Examples such as the following <a id="scenario">travel scenario</a> are
-        used throughout this document to illustrate typical behavior of <a id=
-        "def-web-agent"><dfn>Web agents</dfn></a>—people or software acting on
-        this information space. A <a id="def-user-agent"><dfn>user
-        agent</dfn></a> acts on behalf of a user. Software agents include
+        Examples such as the following <dfn>travel scenario</dfn> are used
+        throughout this document to illustrate typical behavior of <dfn>Web
+        agents</dfn>—people or software acting on this information space. A
+        <dfn>user agent</dfn> acts on behalf of a user. Software agents include
         servers, proxies, spiders, browsers, and multimedia players.
       </p>
       <div class="boxedtext">
@@ -385,9 +382,9 @@ var respecConfig = {
           principles</a> and how they apply to the Web.
         </figcaption>
       </figure>
-      <section>
+      <section id="about">
         <h3>
-          <a id="about">About this Document</a>
+          About this Document
         </h3>
         <p>
           This document describes the properties we desire of the Web and the
@@ -434,13 +431,7 @@ var respecConfig = {
             </li>
             <li>Web content authors and publishers
             </li>
-          </ol><!--
-<p>Readers will benefit from familiarity with the <a
-href="http://www.ietf.org/rfc.html">Requests for Comments</a>
-(<acronym>RFC</acronym>) series from the <a
-href="http://www.ietf.org/">IETF</a>, some of which define pieces of the
-architecture discussed in this document.</p>
--->
+          </ol>
           <p>
             <strong>Note:</strong> This document does not distinguish in any
             formal way the terms "language" and "format." Context determines
@@ -579,13 +570,13 @@ architecture discussed in this document.</p>
         </h3>
         <p>
           The choice of syntax for global identifiers is somewhat arbitrary; it
-          is their global scope that is important. The <a id=
-          "def-uri"><dfn>Uniform Resource Identifier</dfn></a>, [[!URI]], has
-          been successfully deployed since the creation of the Web. There are
-          substantial benefits to participating in the existing network of
-          URIs, including linking, bookmarking, caching, and indexing by search
-          engines, and there are substantial costs to creating a new
-          identification system that has the same properties as URIs.
+          is their global scope that is important. The <dfn>Uniform Resource
+          Identifier</dfn>, [[!URI]], has been successfully deployed since the
+          creation of the Web. There are substantial benefits to participating
+          in the existing network of URIs, including linking, bookmarking,
+          caching, and indexing by search engines, and there are substantial
+          costs to creating a new identification system that has the same
+          properties as URIs.
         </p>
         <div class="boxedtext">
           <p>
@@ -623,14 +614,13 @@ architecture discussed in this document.</p>
         </h3>
         <p>
           By design a URI identifies one resource. We do not limit the scope of
-          what might be a <a id="def-resource"><dfn>resource</dfn></a>. The
-          term "resource" is used in a general sense for whatever might be
-          identified by a URI. It is conventional on the hypertext Web to
-          describe Web pages, images, product catalogs, etc. as “resources”.
-          The distinguishing characteristic of these resources is that all of
-          their essential characteristics can be conveyed in a message. We
-          identify this set as “<a id=
-          "def-information-resource"><dfn>information resources</dfn></a>.”
+          what might be a <dfn>resource</dfn>. The term "resource" is used in a
+          general sense for whatever might be identified by a URI. It is
+          conventional on the hypertext Web to describe Web pages, images,
+          product catalogs, etc. as “resources”. The distinguishing
+          characteristic of these resources is that all of their essential
+          characteristics can be conveyed in a message. We identify this set as
+          “<dfn>information resources</dfn>.”
         </p>
         <p>
           This document is an example of an information resource. It consists
@@ -695,9 +685,9 @@ architecture discussed in this document.</p>
           full name, first name only, sports nickname, romantic nickname, and
           so forth), Web architecture allows the association of more than one
           URI with a resource. URIs that identify the same resource are called
-          <dfn id="def-uri-aliases">URI aliases</dfn>. The section on <a>URI
-          aliases</a> discusses some of the potential costs of creating
-          multiple URIs for the same resource.
+          <dfn>URI aliases</dfn>. The section on <a>URI aliases</a> discusses
+          some of the potential costs of creating multiple URIs for the same
+          resource.
         </p>
         <p>
           Several sections of this document address questions about the
@@ -727,10 +717,9 @@ architecture discussed in this document.</p>
           </h4>
           <p>
             By design, a URI identifies one resource. Using the same URI to
-            directly identify different resources produces a <a id=
-            "def-uri-collision"><dfn>URI collision</dfn></a>. Collision often
-            imposes a cost in communication due to the effort required to
-            resolve ambiguities.
+            directly identify different resources produces a <dfn>URI
+            collision</dfn>. Collision often imposes a cost in communication
+            due to the effort required to resolve ambiguities.
           </p>
           <p>
             Suppose, for example, that one organization makes use of a URI to
@@ -831,9 +820,9 @@ architecture discussed in this document.</p>
               which concerns the expropriation of naming authority.
             </p>
           </section>
-          <section>
+          <section id="assign-other-schemes">
             <h5>
-              <a id="assign-other-schemes">Other allocation schemes</a>
+              Other allocation schemes
             </h5>
             <p>
               Some schemes use techniques other than delegated ownership to
@@ -850,9 +839,9 @@ architecture discussed in this document.</p>
             </p>
           </section>
         </section>
-        <section>
+        <section id="indirect-identification">
           <h4>
-            <a id="indirect-identification">Indirect Identification</a>
+            Indirect Identification
           </h4>
           <p>
             To say that the URI "mailto:nadia@example.com" identifies both an
@@ -881,9 +870,9 @@ architecture discussed in this document.</p>
           </p>
         </section>
       </section>
-      <section>
+      <section id="indirect-identification">
         <h3>
-          <a id="identifiers-comparison">URI Comparisons</a>
+          URI Comparisons
         </h3>
         <p>
           URIs that are identical, character-by-character, refer to the same
@@ -1082,12 +1071,12 @@ architecture discussed in this document.</p>
           invoked to retrieve a representation of the resource, then an "http"
           URI would have sufficed.
         </p>
-        <section>
+        <section id="URI-registration">
           <h4>
-            <a id="URI-registration">URI Scheme Registration</a>
+            URI Scheme Registration
           </h4>
           <p>
-            The Internet Assigned Numbers Authority (<acronym>IANA</acronym>)
+            The Internet Assigned Numbers Authority (<abbr>IANA</abbr>)
             maintains a registry [[!IANASchemes]] of mappings between URI
             scheme names and scheme specifications. For instance, the IANA
             registry indicates that the "http" scheme is defined in
@@ -1293,13 +1282,12 @@ architecture discussed in this document.</p>
       <p>
         Communication between agents over a network about resources involves
         URIs, messages, and data. The Web's protocols (including HTTP, FTP,
-        SOAP, NNTP, and SMTP) are based on the exchange of messages. A <a id=
-        "def-message"><dfn>message</dfn></a> may include data as well as
-        metadata about a resource (such as the "Alternates" and "Vary" HTTP
-        headers), the message data, and the message itself (such as the
-        "Transfer-encoding" HTTP header). A message may even include metadata
-        about the message metadata (for message-integrity checks, for
-        instance).
+        SOAP, NNTP, and SMTP) are based on the exchange of messages. A
+        <dfn>message</dfn> may include data as well as metadata about a
+        resource (such as the "Alternates" and "Vary" HTTP headers), the
+        message data, and the message itself (such as the "Transfer-encoding"
+        HTTP header). A message may even include metadata about the message
+        metadata (for message-integrity checks, for instance).
       </p>
       <div class="boxedtext">
         <p>
@@ -1398,10 +1386,9 @@ architecture discussed in this document.</p>
           schemes. See also, <a href="#orthogonal-specs">principle of
           orthogonal specifications</a>.
         </p>
-        <section>
+        <section id="dereference-details">
           <h4>
-            <a id="dereference-details">Details of retrieving a
-            representation</a>
+            Details of retrieving a representation
           </h4>
           <p>
             Dereferencing a URI generally involves a succession of steps as
@@ -1453,7 +1440,7 @@ architecture discussed in this document.</p>
             <li>Section 1.4 of [[!RFC2616]] states "HTTP communication usually
             takes place over TCP/IP connections." This example addresses
             neither that step in the process nor other steps such as Domain
-            Name System (<acronym>DNS</acronym>) resolution.
+            Name System (<abbr>DNS</abbr>) resolution.
             </li>
             <li>The agent interprets the returned representation according to
             the data format specification that corresponds to the
@@ -1502,17 +1489,15 @@ architecture discussed in this document.</p>
           </p>
         </section>
       </section>
-      <section>
+      <section id="internet-media-type">
         <h3>
-          <a id="internet-media-type">Representation Types and Internet Media
-          Types</a>
+          <a>Representation Types and Internet Media Types</a>
         </h3>
         <p>
-          A <a id="def-representation"><dfn>representation</dfn></a> is data
-          that encodes information about resource state. Representations do not
-          necessarily describe the resource, or portray a likeness of the
-          resource, or represent the resource in other senses of the word
-          "represent".
+          A <dfn>representation</dfn> is data that encodes information about
+          resource state. Representations do not necessarily describe the
+          resource, or portray a likeness of the resource, or represent the
+          resource in other senses of the word "represent".
         </p>
         <p>
           Representations of a resource may be sent or received using
@@ -1553,10 +1538,9 @@ architecture discussed in this document.</p>
           "http://www.w3.org/2001/tag/issues.html#mediaTypeManagement-45">mediaTypeManagement-45</a>
           which concern aspects of the media type mechanism.
         </p>
-        <section>
+        <section id="internet-media-type">
           <h4>
-            <a id="media-type-fragid">Representation types and fragment
-            identifier semantics</a>
+            Representation types and fragment identifier semantics
           </h4>
           <p>
             The Internet Media Type defines the syntax and semantics of the
@@ -1624,13 +1608,13 @@ architecture discussed in this document.</p>
             <a id="frag-coneg">Fragment identifiers and content negotiation</a>
           </h4>
           <p>
-            <a id="def-coneg"><dfn>Content negotiation</dfn></a> refers to the
-            practice of making available multiple representations via the same
-            URI. Negotiation between the requesting agent and the server
-            determines which representation is served (usually with the goal of
-            serving the "best" representation a receiving agent can process).
-            HTTP is an example of a protocol that enables representation
-            providers to use content negotiation.
+            <dfn>Content negotiation</dfn> refers to the practice of making
+            available multiple representations via the same URI. Negotiation
+            between the requesting agent and the server determines which
+            representation is served (usually with the goal of serving the
+            "best" representation a receiving agent can process). HTTP is an
+            example of a protocol that enables representation providers to use
+            content negotiation.
           </p>
           <p>
             Individual data formats may define their own rules for use of the
@@ -1801,23 +1785,22 @@ architecture discussed in this document.</p>
         </h3>
         <p>
           Nadia's retrieval of weather information (an example of a read-only
-          query or lookup) qualifies as a "safe" interaction; a <a id=
-          "def-safe-interaction"><dfn>safe interaction</dfn></a> is one where
-          the agent does not incur any obligation beyond the interaction. An
-          agent may incur an obligation through other means (such as by signing
-          a contract). If an agent does not have an obligation before a safe
-          interaction, it does not have that obligation afterwards.
+          query or lookup) qualifies as a "safe" interaction; a <dfn>safe
+          interaction</dfn> is one where the agent does not incur any
+          obligation beyond the interaction. An agent may incur an obligation
+          through other means (such as by signing a contract). If an agent does
+          not have an obligation before a safe interaction, it does not have
+          that obligation afterwards.
         </p>
         <p>
           Other Web interactions resemble orders more than queries. These
-          <a id="def-unsafe-interaction"><dfn>unsafe interactions</dfn></a> may
-          cause a change to the state of a resource and the user may be held
-          responsible for the consequences of these interactions. Unsafe
-          interactions include subscribing to a newsletter, posting to a list,
-          or modifying a database. <strong>Note:</strong> In this context, the
-          word "unsafe" does not necessarily mean "dangerous"; the term "safe"
-          is used in section 9.1.1 of [[!RFC2616]] and "unsafe" is the natural
-          opposite.
+          <dfn>unsafe interactions</dfn> may cause a change to the state of a
+          resource and the user may be held responsible for the consequences of
+          these interactions. Unsafe interactions include subscribing to a
+          newsletter, posting to a list, or modifying a database.
+          <strong>Note:</strong> In this context, the word "unsafe" does not
+          necessarily mean "dangerous"; the term "safe" is used in section
+          9.1.1 of [[!RFC2616]] and "unsafe" is the natural opposite.
         </p>
         <div class="boxedtext">
           <p>
@@ -2018,10 +2001,9 @@ architecture discussed in this document.</p>
           </p>
           <p>
             Although persistence in this case is observable as a result of
-            representation retrieval, the term <a id=
-            "def-URI-persistence"><dfn>URI persistence</dfn></a> is used to
-            describe the desirable property that, once associated with a
-            resource, a URI should continue indefinitely to refer to that
+            representation retrieval, the term <dfn>URI persistence</dfn> is
+            used to describe the desirable property that, once associated with
+            a resource, a URI should continue indefinitely to refer to that
             resource.
           </p>
           <div class="boxedtext">
@@ -2683,11 +2665,10 @@ architecture discussed in this document.</p>
         </p>
         <p>
           When one resource (representation) refers to another resource with a
-          URI, this constitutes a <a id="def-link"><dfn>link</dfn></a> between
-          the two resources. Additional metadata may also form part of the link
-          (see [[!XLink10]], for example). <strong>Note:</strong> In this
-          document, the term "link" generally means "relationship", not
-          "physical connection".
+          URI, this constitutes a <dfn>link</dfn> between the two resources.
+          Additional metadata may also form part of the link (see [[!XLink10]],
+          for example). <strong>Note:</strong> In this document, the term
+          "link" generally means "relationship", not "physical connection".
         </p>
         <div class="boxedtext">
           <p>
@@ -2750,15 +2731,15 @@ architecture discussed in this document.</p>
             <a id="uri-refs">URI references</a>
           </h4>
           <p>
-            Links are commonly expressed using <a id="uriref"><dfn>URI
-            references</dfn></a> (defined in section 4.2 of [[!URI]]), which
-            may be combined with a base URI to yield a usable URI. Section 5.1
-            of [[!URI]] explains different ways to establish a base URI for a
-            resource and establishes a precedence among them. For instance, the
-            base URI may be a URI for the resource, or specified in a
-            representation (see the <code>base</code> elements provided by HTML
-            and XML, and the HTTP 'Content-Location' header). See also the
-            section on <a class="addrefnb" href="#xml-links">links in XML</a>.
+            Links are commonly expressed using <dfn>URI references</dfn>
+            (defined in section 4.2 of [[!URI]]), which may be combined with a
+            base URI to yield a usable URI. Section 5.1 of [[!URI]] explains
+            different ways to establish a base URI for a resource and
+            establishes a precedence among them. For instance, the base URI may
+            be a URI for the resource, or specified in a representation (see
+            the <code>base</code> elements provided by HTML and XML, and the
+            HTTP 'Content-Location' header). See also the section on <a class=
+            "addrefnb" href="#xml-links">links in XML</a>.
           </p>
           <p>
             Agents resolve a URI reference before using the resulting URI to
@@ -2774,17 +2755,17 @@ architecture discussed in this document.</p>
           <a id="xml-formats">XML-Based Data Formats</a>
         </h3>
         <p>
-          Many data formats are <a id="xml-based"><dfn>XML-based</dfn></a>,
-          that is to say they conform to the syntax rules defined in the XML
-          specification [[!XML10]] or [<a href="#XML11">XML11</a>]. This
-          section discusses issues that are specific to such formats. Anyone
-          seeking guidance in this area is urged to consult the "Guidelines For
-          the Use of XML in IETF Protocols" <a href="#IETFXML">[IETFXML]</a>,
-          which contains a thorough discussion of the considerations that
-          govern whether or not XML ought to be used, as well as specific
-          guidelines on how it ought to be used. While it is directed at
-          Internet applications with specific reference to protocols, the
-          discussion is generally applicable to Web scenarios as well.
+          Many data formats are <dfn>XML-based</dfn>, that is to say they
+          conform to the syntax rules defined in the XML specification
+          [[!XML10]] or [<a href="#XML11">XML11</a>]. This section discusses
+          issues that are specific to such formats. Anyone seeking guidance in
+          this area is urged to consult the "Guidelines For the Use of XML in
+          IETF Protocols" <a href="#IETFXML">[IETFXML]</a>, which contains a
+          thorough discussion of the considerations that govern whether or not
+          XML ought to be used, as well as specific guidelines on how it ought
+          to be used. While it is directed at Internet applications with
+          specific reference to protocols, the discussion is generally
+          applicable to Web scenarios as well.
         </p>
         <p>
           The discussion here should be seen as ancillary to the content of
@@ -2972,9 +2953,9 @@ architecture discussed in this document.</p>
             namespace URI can be used to identify an information resource that
             contains useful information, machine-usable and/or human-usable,
             about terms in the namespace. This type of information resource is
-            called a <a id="def-ns-doc"><dfn>namespace document</dfn></a>. When
-            a namespace URI owner provides a namespace document, it is
-            authoritative for the namespace.
+            called a <dfn>namespace document</dfn>. When a namespace URI owner
+            provides a namespace document, it is authoritative for the
+            namespace.
           </p>
           <p>
             There are many reasons to provide a namespace document. A person
@@ -3150,10 +3131,9 @@ architecture discussed in this document.</p>
             [<a href="#INFOSET">INFOSET</a>] level and do not specify
             normatively how an Infoset is constructed. For those
             specifications, any process that establishes the ID type in the
-            Infoset (and Post Schema Validation Infoset
-            (<acronym>PSVI</acronym>) defined in [<a href=
-            "#XMLSCHEMA">XMLSCHEMA</a>]) may usefully identify the attributes
-            of type ID.
+            Infoset (and Post Schema Validation Infoset (<abbr>PSVI</abbr>)
+            defined in [<a href="#XMLSCHEMA">XMLSCHEMA</a>]) may usefully
+            identify the attributes of type ID.
             </li>
             <li>In practice, applications may have independent means (such as
             those defined in the XPointer specification, [<a href=
@@ -3390,17 +3370,17 @@ architecture discussed in this document.</p>
           new messages).
         </p>
         <p>
-          <a id="def-lang-subset"><dfn>Subset language</dfn></a>: one language
-          is a subset (or "profile") of a second language if any document in
-          the first language is also a valid document in the second language
-          and has the same interpretation in the second language.
+          <dfn>Subset language</dfn>: one language is a subset (or "profile")
+          of a second language if any document in the first language is also a
+          valid document in the second language and has the same interpretation
+          in the second language.
         </p>
         <p>
-          <a id="def-lang-extended"><dfn>Extended language</dfn></a>: If one
-          language is a subset of another, the latter superset is called an
-          extended language; the difference between the languages is called the
-          extension. Clearly, extending a language is better for
-          interoperability than creating an incompatible language.
+          <dfn>Extended language</dfn>: If one language is a subset of another,
+          the latter superset is called an extended language; the difference
+          between the languages is called the extension. Clearly, extending a
+          language is better for interoperability than creating an incompatible
+          language.
         </p>
         <p>
           Ideally, many instances of a superset language can be safely and
@@ -3441,12 +3421,11 @@ architecture discussed in this document.</p>
         <p>
           Errors occur in networked information systems. An error condition can
           be well-characterized (e.g., well-formedness errors in XML or 4xx
-          client errors in HTTP) or arise unpredictably. <a id=
-          "def-error-correction"><dfn>Error correction</dfn></a> means that an
-          agent repairs a condition so that within the system, it is as though
-          the error never occurred. One example of error correction involves
-          data retransmission in response to a temporary network failure.
-          <a id="def-error-recovery"><dfn>Error recovery</dfn></a> means that
+          client errors in HTTP) or arise unpredictably. <dfn>Error
+          correction</dfn> means that an agent repairs a condition so that
+          within the system, it is as though the error never occurred. One
+          example of error correction involves data retransmission in response
+          to a temporary network failure. <dfn>Error recovery</dfn> means that
           an agent does not repair an error condition but continues processing
           by addressing the fact that the error has occurred.
         </p>
@@ -3522,11 +3501,10 @@ architecture discussed in this document.</p>
           Protocols designed to be resilient in the face of widely varying
           environments have helped the Web scale and have facilitated
           communication across multiple trust boundaries. Traditional
-          application programming interfaces (<acronym>APIs</acronym>) do not
-          always take these constraints into account, nor should they be
-          required to. One effect of protocol-based design is that the
-          technology shared among agents often lasts longer than the agents
-          themselves.
+          application programming interfaces (<abbr>APIs</abbr>) do not always
+          take these constraints into account, nor should they be required to.
+          One effect of protocol-based design is that the technology shared
+          among agents often lasts longer than the agents themselves.
         </p>
         <p>
           It is common for programmers working with the Web to write code that
@@ -3655,7 +3633,7 @@ architecture discussed in this document.</p>
           language.</span>
         </dd>
         <dt>
-          <a href="#def-uri-acronym">URI</a>
+          URI
         </dt>
         <dd>
           <span class="content">Acronym for Uniform Resource Identifier.</span>
@@ -3758,7 +3736,7 @@ architecture discussed in this document.</p>
         </h2>
         <dl>
           <dt>
-            <a id="CGI">CGI</a>
+            CGI
           </dt>
           <dd>
             <cite><a href=
