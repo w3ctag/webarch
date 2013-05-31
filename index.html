@@ -308,15 +308,15 @@ var respecConfig = {
       <ol>
         <li>
           <p>
-            <a>Identification (§2)</a>. URIs are used to identify resources. In
-            this travel scenario, the resource is a periodically updated report
-            on the weather in Oaxaca, and the URI is
+            <a>Identification</a>. URIs are used to identify resources. In this
+            travel scenario, the resource is a periodically updated report on
+            the weather in Oaxaca, and the URI is
             “http://weather.example.com/oaxaca”.
           </p>
         </li>
         <li>
           <p>
-            <a>Interaction (§3)</a>. Web agents communicate using standardized
+            <a>Interaction</a>. Web agents communicate using standardized
             protocols that enable interaction through the exchange of messages
             which adhere to a defined syntax and semantics. By entering a URI
             into a retrieval dialog or selecting a hypertext link, Nadia tells
@@ -336,11 +336,11 @@ var respecConfig = {
         </li>
         <li>
           <p>
-            <a>Formats (§4)</a>. Most protocols used for representation
-            retrieval and/or submission make use of a sequence of one or more
-            messages, which taken together contain a payload of representation
-            data and metadata, to transfer the representation between agents.
-            The choice of interaction protocol places limits on the formats of
+            <a>Formats</a>. Most protocols used for representation retrieval
+            and/or submission make use of a sequence of one or more messages,
+            which taken together contain a payload of representation data and
+            metadata, to transfer the representation between agents. The choice
+            of interaction protocol places limits on the formats of
             representation data and metadata that can be transmitted. HTTP, for
             example, typically transmits a single octet stream plus metadata,
             and uses the "Content-Type" and "Content-Encoding" header fields to
@@ -382,7 +382,7 @@ var respecConfig = {
           In the remainder of this document, we highlight important
           architectural points regarding Web identifiers, protocols, and
           formats. We also discuss some important <a>general architectural
-          principles (§5)</a> and how they apply to the Web.
+          principles</a> and how they apply to the Web.
         </figcaption>
       </figure>
       <section>
@@ -450,7 +450,7 @@ architecture discussed in this document.</p>
         </section>
         <section>
           <h4>
-            1.1.2. Scope of this Document
+            Scope of this Document
           </h4>
           <p>
             This document presents the general architecture of the Web. Other
@@ -495,7 +495,7 @@ architecture discussed in this document.</p>
         </section>
         <section>
           <h4>
-            1.1.3. Principles, Constraints, and Good Practice Notes
+            Principles, Constraints, and Good Practice Notes
           </h4>
           <p>
             The important points of this document are categorized as follows:
@@ -542,9 +542,9 @@ architecture discussed in this document.</p>
         </section>
       </section>
     </section>
-    <section>
+    <section id="identification">
       <h2>
-        <a id="identification">Identification</a>
+        Identification
       </h2>
       <p>
         In order to communicate internally, a community agrees (to a reasonable
@@ -573,9 +573,9 @@ architecture discussed in this document.</p>
         "http://www.bootstrap.org/augdocs/augment-132082.htm#11K">Every Object
         Addressable</a> in [[!Eng90]].
       </p>
-      <section>
+      <section id="uri-benefits">
         <h3>
-          <a id="uri-benefits">Benefits of URIs</a>
+          Benefits of URIs
         </h3>
         <p>
           The choice of syntax for global identifiers is somewhat arbitrary; it
@@ -617,9 +617,9 @@ architecture discussed in this document.</p>
           "identify."
         </p>
       </section>
-      <section>
+      <section id="id-resources">
         <h3>
-          <a id="id-resources">URI/Resource Relationships</a>
+          URI/Resource Relationships
         </h3>
         <p>
           By design a URI identifies one resource. We do not limit the scope of
@@ -722,8 +722,8 @@ architecture discussed in this document.</p>
           </li>
         </ul>
         <section>
-          <h4>
-            <a id="URI-collision">URI collision</a>
+          <h4 id="URI-collision">
+            URI collision
           </h4>
           <p>
             By design, a URI identifies one resource. Using the same URI to
@@ -760,21 +760,21 @@ architecture discussed in this document.</p>
             does not necessarily lead to collisions.
           </p>
         </section>
-        <section>
+        <section id="uri-assignment">
           <h4>
-            <a id="uri-assignment">URI allocation</a>
+            URI allocation
           </h4>
           <p>
             URI allocation is the process of associating a URI with a resource.
             Allocation can be performed both by resource owners and by other
             parties. It is important to avoid <a>URI collision</a>.
           </p>
-          <section>
+          <section id="uri-ownership">
             <h5>
-              <a id="uri-ownership">URI ownership</a>
+              URI ownership
             </h5>
             <p>
-              <a id="def-uri-ownership"><dfn>URI ownership</dfn></a> is a
+              <dfn>URI ownership</dfn> is a
               relation between a URI and a social entity, such as a person,
               organization, or specification. URI ownership gives the relevant
               social entity certain rights, including:
@@ -788,7 +788,7 @@ architecture discussed in this document.</p>
             </ol>
             <p>
               By social convention, URI ownership is delegated from the IANA
-              URI scheme registry [<a href="#IANASchemes">IANASchemes</a>],
+              URI scheme registry [[!IANASchemes]],
               itself a social entity, to IANA-registered URI scheme
               specifications. Some URI scheme specifications further delegate
               ownership to subordinate registries or to other nominated owners,
@@ -803,7 +803,7 @@ architecture discussed in this document.</p>
               set of URIs with a common prefix to one particular owner. One
               consequence of this approach is the Web's heavy reliance on the
               central DNS registry. A different approach is taken by the URN
-              Syntax scheme [<a href="#RFC2141">RFC2141</a>] which delegates
+              Syntax scheme [[!RFC2141] which delegates
               ownership of portions of URN space to URN Namespace
               specifications which themselves are registered in an
               IANA-maintained registry of URN Namespace Identifiers.
@@ -834,13 +834,12 @@ architecture discussed in this document.</p>
           </section>
           <section>
             <h5>
-              <a id="assign-other-schemes">Other allocation
-              schemes</a>
+              <a id="assign-other-schemes">Other allocation schemes</a>
             </h5>
             <p>
               Some schemes use techniques other than delegated ownership to
               avoid collision. For example, the specification for the data URL
-              (sic) scheme [<a href="#RFC2397">RFC2397</a>] specifies that the
+              (sic) scheme [[!RFC2397]] specifies that the
               resource identified by a data scheme URI has only one possible
               representation. The representation data makes up the URI that
               identifies that resource. Thus, the specification itself
@@ -915,9 +914,9 @@ architecture discussed in this document.</p>
           See also the <a>assertion that two URIs identify the same
           resource</a>.
         </p>
-        <section>
+        <section id="uri-aliases">
           <h4>
-            <a id="uri-aliases">URI aliases</a>
+            URI aliases
           </h4>
           <p>
             Although there are benefits (such as naming flexibility) to URI
@@ -971,14 +970,13 @@ architecture discussed in this document.</p>
             as server-side redirects to relate the two resources. The community
             benefits when the URI owner supports redirection of an aliased URI
             to the corresponding "official" URI. For more information on
-            redirection, see section 10.3, Redirection, in [<a href=
-            "#RFC2616">RFC2616</a>]. See also [[!CHIPS]] for a discussion of
+            redirection, see section 10.3, Redirection, in [[!RFC2616]]. See also [[!CHIPS]] for a discussion of
             some best practices for server administrators.
           </p>
         </section>
-        <section>
+        <section id="representation-reuse">
           <h4>
-            <a id="representation-reuse">Representation reuse</a>
+            Representation reuse
           </h4>
           <p>
             URI aliasing only occurs when more than one URI is used to identify
@@ -1020,9 +1018,9 @@ architecture discussed in this document.</p>
           </p>
         </section>
       </section>
-      <section>
+      <section id="URI-scheme">
         <h3>
-          <a id="URI-scheme">URI Schemes</a>
+          URI Schemes
         </h3>
         <p>
           In the URI "http://weather.example.com/", the "http" that appears
@@ -1057,7 +1055,7 @@ architecture discussed in this document.</p>
           processes URIs of well-known schemes. Introducing a new URI scheme
           requires the development and deployment not only of client software
           to handle the scheme, but also of ancillary agents such as gateways,
-          proxies, and caches. See [<a href="#RFC2718">RFC2718</a>] for other
+          proxies, and caches. See [[!RFC2718]] for other
           considerations and costs related to URI scheme design.
         </p>
         <p>
@@ -1091,12 +1089,12 @@ architecture discussed in this document.</p>
           </h4>
           <p>
             The Internet Assigned Numbers Authority (<acronym>IANA</acronym>)
-            maintains a registry [<a href="#IANASchemes">IANASchemes</a>] of
+            maintains a registry [[!IANASchemes]] of
             mappings between URI scheme names and scheme specifications. For
             instance, the IANA registry indicates that the "http" scheme is
-            defined in [<a href="#RFC2616">RFC2616</a>]. The process for
-            registering a new URI scheme is defined in [<a href=
-            "#RFC2717">RFC2717</a>].
+            defined in [[!RFC2616]]. The process for
+            registering a new URI scheme is defined in 
+            [[!RFC2717]].
           </p>
           <p>
             Unregistered URI schemes SHOULD NOT be used for a number of
@@ -1137,9 +1135,9 @@ architecture discussed in this document.</p>
           </p>
         </section>
       </section>
-      <section>
+      <section id="uri-opacity">
         <h3>
-          <a id="uri-opacity">URI Opacity</a>
+          URI Opacity
         </h3>
         <p>
           It is tempting to guess the nature of a resource by inspection of a
@@ -1203,9 +1201,9 @@ architecture discussed in this document.</p>
           "http://www.w3.org/2001/tag/issues.html#siteData-36">siteData-36</a>.
         </p>
       </section>
-      <section>
+      <section id="fragid">
         <h3>
-          <a id="fragid">Fragment Identifiers</a>
+          Fragment Identifiers
         </h3>
         <div class="boxedtext">
           <p>
@@ -1224,15 +1222,14 @@ architecture discussed in this document.</p>
           </div>
         </div>
         <p>
-          The <a id="def-fragid"><dfn>fragment identifier</dfn></a> component
-          of a URI allows indirect identification of a <a id=
-          "def-secondary-resource"><dfn>secondary resource</dfn></a> by
-          reference to a primary resource and additional identifying
-          information. The secondary resource may be some portion or subset of
-          the primary resource, some view on representations of the primary
-          resource, or some other resource defined or described by those
-          representations. The terms "primary resource" and "secondary
-          resource" are defined in section 3.5 of [[!URI]].
+          The <dfn>fragment identifier</dfn> component of a URI allows indirect
+          identification of a <dfn>secondary resource</dfn> by reference to a
+          primary resource and additional identifying information. The
+          secondary resource may be some portion or subset of the primary
+          resource, some view on representations of the primary resource, or
+          some other resource defined or described by those representations.
+          The terms "primary resource" and "secondary resource" are defined in
+          section 3.5 of [[!URI]].
         </p>
         <p>
           The terms “primary” and “secondary” in this context do not limit the
@@ -1258,16 +1255,16 @@ architecture discussed in this document.</p>
           to identify abstract components.
         </p>
       </section>
-      <section>
+      <section id="identifiers-future">
         <h3>
-          <a id="identifiers-future">Future Directions for Identifiers</a>
+          Future Directions for Identifiers
         </h3>
         <p>
           There remain open questions regarding identifiers on the Web.
         </p>
-        <section>
+        <section id="i18n-id">
           <h4>
-            <a id="i18n-id">Internationalized identifiers</a>
+            Internationalized identifiers
           </h4>
           <p>
             The integration of internationalized identifiers (i.e., composed of
@@ -1277,10 +1274,9 @@ architecture discussed in this document.</p>
             for discussion about work going on in this area.
           </p>
         </section>
-        <section>
+        <section id="future-comparison">
           <h4>
-            <a id="future-comparison">Assertion that two URIs identify
-            the same resource</a>
+            Assertion that two URIs identify the same resource
           </h4>
           <p>
             Emerging Semantic Web technologies, including the "Web Ontology
@@ -1292,9 +1288,9 @@ architecture discussed in this document.</p>
         </section>
       </section>
     </section>
-    <section>
+    <section id="interaction">
       <h2>
-        <a id="interaction">Interaction</a>
+        Interaction
       </h2>
       <p>
         Communication between agents over a network about resources involves
@@ -1345,13 +1341,13 @@ architecture discussed in this document.</p>
         Web is a highly distributed system affects architectural constraints
         and assumptions about interactions.
       </p>
-      <section>
+      <section id="dereference-uri">
         <h3>
-          <a id="dereference-uri">Using a URI to Access a Resource</a>
+          Using a URI to Access a Resource
         </h3>
         <p>
           Agents may use a URI to access the referenced resource; this is
-          called <a id="uri-dereference"><dfn>dereferencing the URI</dfn></a>.
+          called <dfn>dereferencing the URI</dfn>.
           Access may take many forms, including retrieving a representation of
           the resource (for instance, by using HTTP GET or HEAD), adding or
           modifying a representation of the resource (for instance, by using
@@ -1368,8 +1364,7 @@ architecture discussed in this document.</p>
           of a resource, whereas a hypertext link checker might use HTTP HEAD
           on the same URI simply to establish whether a representation is
           available. Some URI schemes set expectations about available access
-          methods, others (such as the URN scheme [<a href="#RFC2141">RFC
-          2141</a>]) do not. Section 1.2.2 of [[!URI]] discusses the separation
+          methods, others (such as the URN scheme [[!RFC2141]]) do not. Section 1.2.2 of [[!URI]] discusses the separation
           of identification and interaction in more detail. For more
           information about relationships between multiple access methods and
           URI addressability, see the TAG finding <cite>"<a href=
@@ -1447,19 +1442,19 @@ architecture discussed in this document.</p>
             identifiers within that scheme." The URI scheme name in this
             example is "http".
             </li>
-            <li>[<a href="#IANASchemes">IANASchemes</a>] states that the "http"
+            <li>[[!IANASchemes]] states that the "http"
             scheme is defined by the HTTP/1.1 specification (RFC 2616
-              [<a href="#RFC2616">RFC2616</a>], section 3.2.2).
+              [[!RFC2616]], section 3.2.2).
             </li>
             <li>In this SVG context, the agent constructs an HTTP GET request
-            (per section 9.3 of [<a href="#RFC2616">RFC2616</a>]) to retrieve
+            (per section 9.3 of [[!RFC2616]]) to retrieve
             the representation.
             </li>
-            <li>Section 6 of [<a href="#RFC2616">RFC2616</a>] defines how the
+            <li>Section 6 of [[!RFC2616]] defines how the
             server constructs a corresponding response message, including the
             'Content-Type' field.
             </li>
-            <li>Section 1.4 of [<a href="#RFC2616">RFC2616</a>] states "HTTP
+            <li>Section 1.4 of [[!RFC2616]] states "HTTP
             communication usually takes place over TCP/IP connections." This
             example addresses neither that step in the process nor other steps
             such as Domain Name System (<acronym>DNS</acronym>) resolution.
@@ -1513,8 +1508,8 @@ architecture discussed in this document.</p>
       </section>
       <section>
         <h3>
-          <a id="internet-media-type">Representation Types and Internet
-          Media Types</a>
+          <a id="internet-media-type">Representation Types and Internet Media
+          Types</a>
         </h3>
         <p>
           A <a id="def-representation"><dfn>representation</dfn></a> is data
@@ -1625,14 +1620,13 @@ architecture discussed in this document.</p>
             passed to other systems during the process of retrieval. This means
             that some intermediaries in Web architecture (such as proxies) have
             no interaction with fragment identifiers and that redirection (in
-            HTTP [<a href="#RFC2616">RFC2616</a>], for example) does not
+            HTTP [[!RFC2616]], for example) does not
             account for fragments.
           </p>
         </section>
         <section>
           <h4>
-            <a id="frag-coneg">Fragment identifiers and content
-            negotiation</a>
+            <a id="frag-coneg">Fragment identifiers and content negotiation</a>
           </h4>
           <p>
             <a id="def-coneg"><dfn>Content negotiation</dfn></a> refers to the
@@ -1693,7 +1687,7 @@ architecture discussed in this document.</p>
             identifier semantics. When a received data format does not define
             fragment identifier semantics, the agent should not perform
             <a href="#no-silent-recovery">silent error recovery</a> unless the
-            user has given consent; see [<a href="#CUAP">CUAP</a>] for
+            user has given consent; see [[!CUAP]] for
             additional suggested agent behavior in this case.
           </p>
           <p>
@@ -1827,7 +1821,7 @@ architecture discussed in this document.</p>
           interactions include subscribing to a newsletter, posting to a list,
           or modifying a database. <strong>Note:</strong> In this context, the
           word "unsafe" does not necessarily mean "dangerous"; the term "safe"
-          is used in section 9.1.1 of [<a href="#RFC2616">RFC2616</a>] and
+          is used in section 9.1.1 of [[!RFC2616]] and
           "unsafe" is the natural opposite.
         </p>
         <div class="boxedtext">
@@ -1935,8 +1929,7 @@ architecture discussed in this document.</p>
             has incurred an obligation on behalf of the user. For transaction
             results, HTTP allows representation providers to associate a URI
             with the results of an HTTP POST request using the
-            "Content-Location" header (described in section 14.14 of [<a href=
-            "#RFC2616">RFC2616</a>]).
+            "Content-Location" header (described in section 14.14 of [[!RFC2616]]).
           </p>
         </section>
       </section>
@@ -2052,7 +2045,7 @@ architecture discussed in this document.</p>
             persistent or that they will not be persistent.
           </p>
           <p>
-            HTTP [<a href="#RFC2616">RFC2616</a>] has been designed to help
+            HTTP [[!RFC2616]] has been designed to help
             manage URI persistence. For example, HTTP redirection (using the
             3xx response codes) permits servers to tell an agent that further
             action needs to be taken by the agent in order to fulfill the
@@ -2181,9 +2174,9 @@ architecture discussed in this document.</p>
           expects future versions of this document to address in more detail
           the relationship between the architecture described herein, <a href=
           "http://www.w3.org/2002/ws/">Web Services</a>, peer-to-peer systems,
-          instant messaging systems (such as [<a href="#RFC3920">RFC3920</a>]),
-          streaming audio (such as RTSP [<a href="#RFC2326">RFC2326</a>]), and
-          voice-over-IP (such as SIP [<a href="#RFC3261">RFC3261</a>]).
+          instant messaging systems (such as [[!RFC3920]]),
+          streaming audio (such as RTSP [[!RFC2326]]), and
+          voice-over-IP (such as SIP [[!RFC3261]]).
         </p>
       </section>
     </section>
@@ -2239,7 +2232,7 @@ architecture discussed in this document.</p>
           defined encoding as a sequence of characters. HTML, Internet e-mail,
           and all <a href="#xml-formats">XML-based formats</a> are textual.
           Increasingly, internationalized textual data formats refer to the
-          Unicode repertoire [<a href="#UNICODE">UNICODE</a>] for character
+          Unicode repertoire [[!UNICODE]] for character
           definitions.
         </p>
         <p>
@@ -2326,7 +2319,7 @@ architecture discussed in this document.</p>
           "http://www.w3.org/2001/tag/issues.html#XMLVersioning-41">XMLVersioning-41</a>,
           which concerns good practices for designing extensible XML languages
           and for handling versioning. See also "Web Architecture: Extensible
-          Languages" [<a href="#EXTLANG">EXTLANG</a>].
+          Languages" [[!EXTLANG]].
         </p>
         <section>
           <h4>
@@ -2349,8 +2342,7 @@ architecture discussed in this document.</p>
         </section>
         <section>
           <h4>
-            <a id="versioning-xmlns">Versioning and XML namespace
-            policy</a>
+            <a id="versioning-xmlns">Versioning and XML namespace policy</a>
           </h4>
           <div class="boxedtext">
             <p>
@@ -2529,7 +2521,7 @@ architecture discussed in this document.</p>
           </p>
           <p>
             See “<a href="http://www.w3.org/TR/qaframe-spec/#extensions">D.3
-            Extensibility and Extensions</a>” in [<a href="#QA">QA</a>].
+            Extensibility and Extensions</a>” in [[!QA]].
           </p>
         </section>
         <section>
@@ -2583,8 +2575,7 @@ architecture discussed in this document.</p>
       </section>
       <section>
         <h3>
-          <a id="pci">Separation of Content, Presentation, and
-          Interaction</a>
+          <a id="pci">Separation of Content, Presentation, and Interaction</a>
         </h3>
         <p>
           The Web is a heterogeneous environment where a wide variety of agents
@@ -2699,7 +2690,7 @@ architecture discussed in this document.</p>
           When one resource (representation) refers to another resource with a
           URI, this constitutes a <a id="def-link"><dfn>link</dfn></a> between
           the two resources. Additional metadata may also form part of the link
-          (see [<a href="#XLink10">XLink10</a>], for example).
+          (see [[!XLink10]], for example).
           <strong>Note:</strong> In this document, the term "link" generally
           means "relationship", not "physical connection".
         </p>
@@ -2790,7 +2781,7 @@ architecture discussed in this document.</p>
         <p>
           Many data formats are <a id="xml-based"><dfn>XML-based</dfn></a>,
           that is to say they conform to the syntax rules defined in the XML
-          specification [<a href="#XML10">XML10</a>] or [<a href=
+          specification [[!XML10]] or [<a href=
           "#XML11">XML11</a>]. This section discusses issues that are specific
           to such formats. Anyone seeking guidance in this area is urged to
           consult the "Guidelines For the Use of XML in IETF Protocols"
@@ -2853,7 +2844,7 @@ architecture discussed in this document.</p>
           <p>
             Sophisticated linking mechanisms have been invented for XML
             formats. XPointer allows links to address content that does not
-            have an explicit, named anchor. [<a href="#XLink10">XLink</a>] is
+            have an explicit, named anchor. [[!XLink]] is
             an appropriate specification for representing links in <a href=
             "#hypertext">hypertext</a> XML applications. XLink allows links to
             have multiple ends and to be expressed either inline or in "link
@@ -2905,7 +2896,7 @@ architecture discussed in this document.</p>
             namespace URIs that end with a hash (“#”) are chosen, then simple
             concatenation of the namespace URI and the local name creates a URI
             for a secondary resource (the identified term). This technique is
-            used for many [<a href="#RDFXML">RDFXML</a>] namespaces.
+            used for many [[!RDFXML]] namespaces.
           </p>
           <p>
             Other mappings are likely to be more suitable for hierarchical
@@ -2954,7 +2945,7 @@ architecture discussed in this document.</p>
             constraints on the use of namespaces. DTDs perform validation based
             on the lexical form of the element and attribute names in the
             document. This makes prefixes syntactically significant in ways
-            that are not anticipated by [<a href="#XMLNS">XMLNS</a>].
+            that are not anticipated by [[!XMLNS]].
           </p>
         </section>
         <section>
@@ -3041,9 +3032,8 @@ architecture discussed in this document.</p>
           </div>
           <p>
             For example, the following are examples of data formats for
-            namespace documents: [<a href="#OWL10">OWL10</a>], [<a href=
-            "#RDDL">RDDL</a>], [<a href="#XMLSCHEMA">XMLSCHEMA</a>], and
-            [<a href="#XHTML11">XHTML11</a>]. Each of these formats meets
+            namespace documents: [[!OWL10]], [[!RDDL]], [[!XMLSCHEMA]], and
+            [[!XHTML11]]. Each of these formats meets
             different requirements described above for satisfying the needs of
             an agent that wants more information about the namespace. Note,
             however, issues related to <a href="#frag-coneg">fragment
@@ -3278,8 +3268,7 @@ architecture discussed in this document.</p>
       </section>
       <section>
         <h3>
-          <a id="media-types-infospace"></a>Future Directions for Data
-          Formats
+          <a id="media-types-infospace"></a>Future Directions for Data Formats
         </h3>
         <p>
           Data formats enable the creation of new applications to make use of
@@ -4244,9 +4233,9 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/xslt.
           </dd>
         </dl>
-        <section>
+        <section id="archspecs">
           <h3>
-            7.1. <a id="archspecs">Architectural Specifications</a>
+            Architectural Specifications
           </h3>
           <dl>
             <dt>
@@ -4389,9 +4378,9 @@ architecture discussed in this document.</p>
         </section>
       </section><!-- Included; see Makefile -->
     </section>
-    <section>
+    <section id="acknolegements" class="informative">
       <h2>
-        8. <a id="acks">Acknowledgments</a>
+        Acknowledgments
       </h2>
       <p>
         This document was authored by the W3C Technical Architecture Group
