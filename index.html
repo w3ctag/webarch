@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>
-      Architecture of the World Wide Web, Volume Two
+      Architecture of the World Wide Web, Living Document
     </title>
     <script src="http://www.w3.org/Tools/respec/respec-w3c-common" class=
     "remove">
 </script>
     <script class='remove'>
 var respecConfig = {
-    specStatus: "ED",
+    specStatus: "unofficial",
     shortName: "manifest",
     //publishDate:  "2012-12-12",
     //previousPublishDate:  "",
@@ -32,7 +32,7 @@ var respecConfig = {
     wg: "Technical Architecture Group",
     wgURI: "http://www.w3.org/2001/tag/",
     wgPublicList: "www-tag",
-    //wgPatentURI: "http://www.w3.org/2004/01/pp-impl/58119/status",
+    wgPatentURI: "http://www.w3.org/2001/tag/disclosures",
     otherLinks: [{
             key: "Repository",
             data: [{
@@ -52,109 +52,15 @@ var respecConfig = {
     noIDLIn: true,
     noLegacyStyle: false,
     extraCSS: ["../ReSpec.js/css/respec.css"],
-    wg: "Web Applications (WebApps) Working Group",
-    wgURI: "http://www.w3.org/2008/webapps/",
+    wg: "Technical Architecture Group",
+    wgURI: "http://www.w3.org/2001/tag/",
     wgPublicList: "public-webapps",
-    wgPatentURI: "http://www.w3.org/2004/01/pp-impl/42538/status"
+    wgPatentURI: "http://www.w3.org/2001/tag/"
     };
     </script>
-    <link rel="stylesheet" href="style/default.css">
-    <link rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/unofficial">
-    <link rel="stylesheet" href=
-    "http://www.w3.org/StyleSheets/TR/w3c-unofficial">
   </head>
   <body>
-    <div class="head">
-      <p>
-        <a href="http://www.w3.org/"><img height="48" width="72" alt="W3C" src=
-        "http://www.w3.org/Icons/w3c_home"></a>
-      </p>
-      <h1>
-        Architecture of the World Wide Web, Living Document
-      </h1>
-      <div class="section">
-        <h2 class="notoc">
-          <a id="date" name="date"><span class="editorcopy">Editor's
-          Draft</span> [DATE]</a>
-        </h2>
-        <dl>
-          <dt>
-            This version:
-          </dt>
-          <dd>
-            ...
-          </dd>
-          <dt>
-            Latest editor's draft:
-          </dt>
-          <dd>
-            <a href="...">...</a>
-          </dd>
-          <dt>
-            Previous version:
-          </dt>
-          <dd>
-            <a href=
-            "">http://www.w3.org/2001/tag/2004/webarch-20041209/</a>
-          </dd>
-          <dt>
-            Latest TR version:
-          </dt>
-          <dd>
-            <a href=
-            "http://www.w3.org/TR/webarch/">http://www.w3.org/TR/webarch/</a>
-          </dd>
-          <dt>
-            Editors:
-          </dt>
-          <dd>
-            ....
-          </dd>
-          <dt>
-            Former Editors:
-          </dt>
-          <dd>
-            <a href="/People/Jacobs">Ian Jacobs</a>, W3C
-          </dd>
-          <dd>
-            Norman Walsh, Sun Microsystems, Inc.
-          </dd>
-          <dt>
-            Authors:
-          </dt>
-          <dd>
-            See <a href="#acks">acknowledgments (§8)</a>.
-          </dd>
-        </dl>
-        <p class="copyright">
-          <a href=
-          "http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-          © 2002-2013 <a href="/"><acronym title=
-          "World Wide Web Consortium">W3C</acronym></a> <sup>®</sup> (<a href=
-          "http://www.lcs.mit.edu/"><acronym title=
-          "Massachusetts Institute of Technology">MIT</acronym></a>, <a href=
-          "http://www.ercim.org/"><acronym title=
-          "European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>,
-          <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
-          <a href=
-          "/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-          <a href="/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
-          <a rel="Copyright" href=
-          "/Consortium/Legal/copyright-documents">document use</a> and <a rel=
-          "Copyright" href="/Consortium/Legal/copyright-software">software
-          licensing</a> rules apply. Your interactions with this site are in
-          accordance with our <a href=
-          "/Consortium/Legal/privacy-statement#Public">public</a> and <a href=
-          "/Consortium/Legal/privacy-statement#Members">Member</a> privacy
-          statements.
-        </p>
-        <hr>
-      </div>
-    </div>
-    <div class="section">
-      <h2 class="notoc">
-        <a name="abstract" id="abstract">Abstract</a>
-      </h2>
+    <section id="abstract">
       <p>
         The World Wide Web uses relatively simple technologies with sufficient
         scalability, efficiency and utility that they have resulted in a
@@ -167,11 +73,8 @@ var respecConfig = {
         resources in the space. We relate core design components, constraints,
         and good practices to the principles and properties they support.
       </p>
-    </div>
-    <div class="section">
-      <h2 class="notoc">
-        <a name="status" id="status">Status of this document</a>
-      </h2>
+    </section>
+    <section id="sotd">
       <p>
         This is an unofficial draft and work in progress. It has no official
         standading.
@@ -204,190 +107,169 @@ var respecConfig = {
         The <a href="#URI">[URI]</a> citation should reflect publication of the
         relevant RFC in future revisions.
       </p>
-      <p>
-        This document was produced under the <a href=
-        "http://www.w3.org/Consortium/Process-20010719/policies#ipr">W3C IPR
-        policy of the July 2001 Process Document</a>. The TAG maintains a
-        <a rel="disclosure" href=
-        "http://www.w3.org/2001/tag/disclosures">public list of patent
-        disclosures</a> relevant to this document; that page also includes
-        instructions for disclosing a patent. An individual who has actual
-        knowledge of a patent which the individual believes contains Essential
-        Claim(s) with respect to this specification should disclose the
-        information in accordance with <a href=
-        "http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
-        6 of the W3C Patent Policy</a>.
-      </p>
-    </div>
+    </section>
     <div class="section">
-      <h2 class="notoc">
-        <a id="contents" name="contents">Table of Contents</a>
-      </h2>
-      <div class="section">
-        <h3 class="notoc">
-          <a id="principles" name="principles">List of Principles, Constraints,
-          and Good Practice Notes</a>
-        </h3>
-        <p>
-          The following principles, constraints, and good practice notes are
-          discussed in this document and listed here for convenience. There is
-          also a <a href="summary.html">free-standing summary</a>.
-        </p>
-        <dl>
-          <dt>
-            Identification
-          </dt>
-          <dd>
-            <ul>
-              <li>
-                <a href="#pr-global-id">Global Identifiers</a> (principle, 2)
-              </li>
-              <li>
-                <a href="#pr-use-uris">Identify with URIs</a> (practice, 2.1)
-              </li>
-              <li>
-                <a href="#pr-uri-collision">URIs Identify a Single Resource</a>
-                (constraint, 2.2)
-              </li>
-              <li>
-                <a href="#avoid-uri-aliases">Avoiding URI aliases</a>
-                (practice, 2.3.1)
-              </li>
-              <li>
-                <a href="#lc-uri-chars">Consistent URI usage</a> (practice,
-                2.3.1)
-              </li>
-              <li>
-                <a href="#pr-reuse-uri-schemes">Reuse URI schemes</a>
-                (practice, 2.4)
-              </li>
-              <li>
-                <a href="#pr-uri-opacity">URI opacity</a> (practice, 2.5)
-              </li>
-            </ul>
-          </dd>
-          <dt>
-            Interaction
-          </dt>
-          <dd>
-            <ul>
-              <li>
-                <a href="#pr-reuse-formats">Reuse representation formats</a>
-                (practice, 3.2)
-              </li>
-              <li>
-                <a href="#pr-server-auth">Data-metadata inconsistency</a>
-                (constraint, 3.3)
-              </li>
-              <li>
-                <a href="#pr-metadata-association">Metadata association</a>
-                (practice, 3.3)
-              </li>
-              <li>
-                <a href="#pr-deref-safe">Safe retrieval</a> (principle, 3.4)
-              </li>
-              <li>
-                <a href="#pr-describe-resource">Available representation</a>
-                (practice, 3.5)
-              </li>
-              <li>
-                <a href="#implied-dereference">Reference does not imply
-                dereference</a> (principle, 3.5)
-              </li>
-              <li>
-                <a href="#pr-service-uri">Consistent representation</a>
-                (practice, 3.5.1)
-              </li>
-            </ul>
-          </dd>
-          <dt>
-            Data Formats
-          </dt>
-          <dd>
-            <ul>
-              <li>
-                <a href="#pr-version-info">Version information</a> (practice,
-                4.2.1)
-              </li>
-              <li>
-                <a href="#pr-doc-ns-policy">Namespace policy</a> (practice,
-                4.2.2)
-              </li>
-              <li>
-                <a href="#pr-allow-exts">Extensibility mechanisms</a>
-                (practice, 4.2.3)
-              </li>
-              <li>
-                <a href="#pr-conform-exts">Extensibility conformance</a>
-                (practice, 4.2.3)
-              </li>
-              <li>
-                <a href="#pr-unknown-extension">Unknown extensions</a>
-                (practice, 4.2.3)
-              </li>
-              <li>
-                <a href="#cpi">Separation of content, presentation,
-                interaction</a> (practice, 4.3)
-              </li>
-              <li>
-                <a href="#link-mechanism">Link identification</a> (practice,
-                4.4)
-              </li>
-              <li>
-                <a href="#web-linking">Web linking</a> (practice, 4.4)
-              </li>
-              <li>
-                <a href="#generic-uri">Generic URIs</a> (practice, 4.4)
-              </li>
-              <li>
-                <a href="#use-hypertext-links">Hypertext links</a> (practice,
-                4.4)
-              </li>
-              <li>
-                <a href="#use-namespaces">Namespace adoption</a> (practice,
-                4.5.3)
-              </li>
-              <li>
-                <a href="#pr-namespace-documents">Namespace documents</a>
-                (practice, 4.5.4)
-              </li>
-              <li>
-                <a href="#qname-uri-syntax">QNames Indistinguishable from
-                URIs</a> (constraint, 4.5.5)
-              </li>
-              <li>
-                <a href="#qname-mapping">QName Mapping</a> (practice, 4.5.5)
-              </li>
-              <li>
-                <a href="#no-text-xml">XML and "text/*"</a> (practice, 4.5.7)
-              </li>
-              <li>
-                <a href="#no-charset">XML and character encodings</a>
-                (practice, 4.5.7)
-              </li>
-            </ul>
-          </dd>
-          <dt>
-            General Architecture Principles
-          </dt>
-          <dd>
-            <ul>
-              <li>
-                <a href="#pr-orthogonality">Orthogonality</a> (principle, 5.1)
-              </li>
-              <li>
-                <a href="#no-silent-recovery">Error recovery</a> (principle,
-                5.3)
-              </li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
-      <hr>
+      <h3>
+	<a id="principles">List of Principles, Constraints, and Good Practice
+	Notes</a>
+      </h3>
+      <p>
+	The following principles, constraints, and good practice notes are
+	discussed in this document and listed here for convenience. There is
+	also a <a href="summary.html">free-standing summary</a>.
+      </p>
+      <dl>
+	<dt>
+	  Identification
+	</dt>
+	<dd>
+	  <ul>
+	    <li>
+	      <a href="#pr-global-id">Global Identifiers</a> (principle, 2)
+	    </li>
+	    <li>
+	      <a href="#pr-use-uris">Identify with URIs</a> (practice, 2.1)
+	    </li>
+	    <li>
+	      <a href="#pr-uri-collision">URIs Identify a Single Resource</a>
+	      (constraint, 2.2)
+	    </li>
+	    <li>
+	      <a href="#avoid-uri-aliases">Avoiding URI aliases</a> (practice,
+	      2.3.1)
+	    </li>
+	    <li>
+	      <a href="#lc-uri-chars">Consistent URI usage</a> (practice,
+	      2.3.1)
+	    </li>
+	    <li>
+	      <a href="#pr-reuse-uri-schemes">Reuse URI schemes</a> (practice,
+	      2.4)
+	    </li>
+	    <li>
+	      <a href="#pr-uri-opacity">URI opacity</a> (practice, 2.5)
+	    </li>
+	  </ul>
+	</dd>
+	<dt>
+	  Interaction
+	</dt>
+	<dd>
+	  <ul>
+	    <li>
+	      <a href="#pr-reuse-formats">Reuse representation formats</a>
+	      (practice, 3.2)
+	    </li>
+	    <li>
+	      <a href="#pr-server-auth">Data-metadata inconsistency</a>
+	      (constraint, 3.3)
+	    </li>
+	    <li>
+	      <a href="#pr-metadata-association">Metadata association</a>
+	      (practice, 3.3)
+	    </li>
+	    <li>
+	      <a href="#pr-deref-safe">Safe retrieval</a> (principle, 3.4)
+	    </li>
+	    <li>
+	      <a href="#pr-describe-resource">Available representation</a>
+	      (practice, 3.5)
+	    </li>
+	    <li>
+	      <a href="#implied-dereference">Reference does not imply
+	      dereference</a> (principle, 3.5)
+	    </li>
+	    <li>
+	      <a href="#pr-service-uri">Consistent representation</a>
+	      (practice, 3.5.1)
+	    </li>
+	  </ul>
+	</dd>
+	<dt>
+	  Data Formats
+	</dt>
+	<dd>
+	  <ul>
+	    <li>
+	      <a href="#pr-version-info">Version information</a> (practice,
+	      4.2.1)
+	    </li>
+	    <li>
+	      <a href="#pr-doc-ns-policy">Namespace policy</a> (practice,
+	      4.2.2)
+	    </li>
+	    <li>
+	      <a href="#pr-allow-exts">Extensibility mechanisms</a> (practice,
+	      4.2.3)
+	    </li>
+	    <li>
+	      <a href="#pr-conform-exts">Extensibility conformance</a>
+	      (practice, 4.2.3)
+	    </li>
+	    <li>
+	      <a href="#pr-unknown-extension">Unknown extensions</a> (practice,
+	      4.2.3)
+	    </li>
+	    <li>
+	      <a href="#cpi">Separation of content, presentation,
+	      interaction</a> (practice, 4.3)
+	    </li>
+	    <li>
+	      <a href="#link-mechanism">Link identification</a> (practice, 4.4)
+	    </li>
+	    <li>
+	      <a href="#web-linking">Web linking</a> (practice, 4.4)
+	    </li>
+	    <li>
+	      <a href="#generic-uri">Generic URIs</a> (practice, 4.4)
+	    </li>
+	    <li>
+	      <a href="#use-hypertext-links">Hypertext links</a> (practice,
+	      4.4)
+	    </li>
+	    <li>
+	      <a href="#use-namespaces">Namespace adoption</a> (practice,
+	      4.5.3)
+	    </li>
+	    <li>
+	      <a href="#pr-namespace-documents">Namespace documents</a>
+	      (practice, 4.5.4)
+	    </li>
+	    <li>
+	      <a href="#qname-uri-syntax">QNames Indistinguishable from
+	      URIs</a> (constraint, 4.5.5)
+	    </li>
+	    <li>
+	      <a href="#qname-mapping">QName Mapping</a> (practice, 4.5.5)
+	    </li>
+	    <li>
+	      <a href="#no-text-xml">XML and "text/*"</a> (practice, 4.5.7)
+	    </li>
+	    <li>
+	      <a href="#no-charset">XML and character encodings</a> (practice,
+	      4.5.7)
+	    </li>
+	  </ul>
+	</dd>
+	<dt>
+	  General Architecture Principles
+	</dt>
+	<dd>
+	  <ul>
+	    <li>
+	      <a href="#pr-orthogonality">Orthogonality</a> (principle, 5.1)
+	    </li>
+	    <li>
+	      <a href="#no-silent-recovery">Error recovery</a> (principle, 5.3)
+	    </li>
+	  </ul>
+	</dd>
+      </dl>
     </div>
+    <hr>
     <div class="section">
       <h2>
-        1. <a id="intro" name="intro">Introduction</a>
+	1. <a id="intro">Introduction</a>
       </h2>
       <p>
         The <a name="def-world-wide-web" id="def-world-wide-web"><dfn>World
@@ -400,9 +282,9 @@ var respecConfig = {
         "def-uri-acronym"><dfn><acronym>URI</acronym></dfn></a>).
       </p>
       <p>
-        Examples such as the following <a name="scenario" id="scenario">travel
-        scenario</a> are used throughout this document to illustrate typical
-        behavior of <a name="def-web-agent" id="def-web-agent"><dfn>Web
+	Examples such as the following <a id="scenario">travel scenario</a> are
+	used throughout this document to illustrate typical behavior of
+	<a name="def-web-agent" id="def-web-agent"><dfn>Web
         agents</dfn></a>—people or software acting on this information space. A
         <a name="def-user-agent" id="def-user-agent"><dfn>user agent</dfn></a>
         acts on behalf of a user. Software agents include servers, proxies,
@@ -529,7 +411,7 @@ var respecConfig = {
       </figure>
       <div class="section">
         <h3>
-          1.1. <a name="about" id="about">About this Document</a>
+	  1.1. <a id="about">About this Document</a>
         </h3>
         <p>
           This document describes the properties we desire of the Web and the
@@ -689,7 +571,7 @@ architecture discussed in this document.</p>
     </div>
     <div class="section">
       <h2>
-        2. <a name="identification" id="identification">Identification</a>
+	2. <a id="identification">Identification</a>
       </h2>
       <p>
         In order to communicate internally, a community agrees (to a reasonable
@@ -1373,7 +1255,7 @@ architecture discussed in this document.</p>
       </div>
       <div class="section">
         <h3>
-          2.6. <a name="fragid" id="fragid">Fragment Identifiers</a>
+	  2.6. <a id="fragid">Fragment Identifiers</a>
         </h3>
         <div class="boxedtext">
           <p>
@@ -1466,7 +1348,7 @@ architecture discussed in this document.</p>
     </div>
     <div class="section">
       <h2>
-        3. <a name="interaction" id="interaction">Interaction</a>
+	3. <a id="interaction">Interaction</a>
       </h2>
       <p>
         Communication between agents over a network about resources involves
@@ -2378,7 +2260,7 @@ architecture discussed in this document.</p>
     </div>
     <div class="section">
       <h2>
-        4. <a id="formats" name="formats">Data Formats</a>
+	4. <a id="formats">Data Formats</a>
       </h2>
       <p>
         A data format specification (for example, for XHTML, RDF/XML, SMIL,
@@ -2414,7 +2296,7 @@ architecture discussed in this document.</p>
       </p>
       <div class="section">
         <h3>
-          4.1. <a name="binary" id="binary">Binary and Textual Data Formats</a>
+	  4.1. <a id="binary">Binary and Textual Data Formats</a>
         </h3>
         <p>
           Binary data formats are those in which portions of the data are
@@ -2520,7 +2402,7 @@ architecture discussed in this document.</p>
         </p>
         <div class="section">
           <h4>
-            4.2.1. <a name="versioning" id="versioning">Versioning</a>
+	    4.2.1. <a id="versioning">Versioning</a>
           </h4>
           <p>
             There is typically a (long) transition period during which multiple
@@ -2623,7 +2505,7 @@ architecture discussed in this document.</p>
         </div>
         <div class="section">
           <h4>
-            4.2.3. <a name="extensibility" id="extensibility">Extensibility</a>
+	    4.2.3. <a id="extensibility">Extensibility</a>
           </h4>
           <p>
             Requirements change over time. Successful technologies are adopted
@@ -2728,8 +2610,7 @@ architecture discussed in this document.</p>
         </div>
         <div class="section">
           <h4>
-            4.2.4. <a name="composition" id="composition">Composition of data
-            formats</a>
+	    4.2.4. <a id="composition">Composition of data formats</a>
           </h4>
           <p>
             Many modern data format include mechanisms for composition. For
@@ -2778,7 +2659,7 @@ architecture discussed in this document.</p>
       </div>
       <div class="section">
         <h3>
-          4.3. <a name="pci" id="pci">Separation of Content, Presentation, and
+	  4.3. <a id="pci">Separation of Content, Presentation, and
           Interaction</a>
         </h3>
         <p>
@@ -2806,8 +2687,8 @@ architecture discussed in this document.</p>
         </p>
         <div class="boxedtext">
           <p>
-            <span class="practicelab">Good practice: <a name="cpi" id=
-            "cpi">Separation of content, presentation, interaction</a></span>
+	    <span class="practicelab">Good practice: <a id="cpi">Separation of
+	    content, presentation, interaction</a></span>
           </p>
           <p class="practice">
             A specification SHOULD allow authors to separate content from both
@@ -2879,7 +2760,7 @@ architecture discussed in this document.</p>
       </div>
       <div class="section">
         <h3>
-          4.4. <a name="hypertext" id="hypertext">Hypertext</a>
+	  4.4. <a id="hypertext">Hypertext</a>
         </h3>
         <p>
           A defining characteristic of the Web is that it allows embedded
@@ -2961,11 +2842,11 @@ architecture discussed in this document.</p>
             4.4.1. <a name="uri-refs" id="uri-refs">URI references</a>
           </h4>
           <p>
-            Links are commonly expressed using <a name="uriref" id=
-            "uriref"><dfn>URI references</dfn></a> (defined in section 4.2 of
-            [<a href="#URI">URI</a>]), which may be combined with a base URI to
-            yield a usable URI. Section 5.1 of [<a href="#URI">URI</a>]
-            explains different ways to establish a base URI for a resource and
+	    Links are commonly expressed using <a id="uriref"><dfn>URI
+	    references</dfn></a> (defined in section 4.2 of [<a href=
+	    "#URI">URI</a>]), which may be combined with a base URI to yield a
+	    usable URI. Section 5.1 of [<a href="#URI">URI</a>] explains
+	    different ways to establish a base URI for a resource and
             establishes a precedence among them. For instance, the base URI may
             be a URI for the resource, or specified in a representation (see
             the <code>base</code> elements provided by HTML and XML, and the
@@ -3345,13 +3226,13 @@ architecture discussed in this document.</p>
           </h4>
           <p>
             Consider the following fragment of XML: <code>&lt;section
-            name="foo"&gt;</code>. Does the <code>section</code> element have
-            what the XML Recommendation refers to as the ID <code>foo</code>
-            (i.e., "foo" must not appear in the surrounding XML document more
-            than once)? One cannot answer this question by examining the
-            element and its attributes alone. In XML, the quality of "being an
-            ID" is associated with the type of an attribute, not its name.
-            Finding the IDs in a document requires additional processing.
+	    &gt;</code>. Does the <code>section</code> element have what the
+	    XML Recommendation refers to as the ID <code>foo</code> (i.e.,
+	    "foo" must not appear in the surrounding XML document more than
+	    once)? One cannot answer this question by examining the element and
+	    its attributes alone. In XML, the quality of "being an ID" is
+	    associated with the type of an attribute, not its name. Finding the
+	    IDs in a document requires additional processing.
           </p>
           <ol>
             <li>Processing the document with a processor that recognizes DTD
@@ -3501,7 +3382,7 @@ architecture discussed in this document.</p>
     </div>
     <div class="section">
       <h2>
-        5. <a name="general" id="general">General Architecture Principles</a>
+	5. <a id="general">General Architecture Principles</a>
       </h2>
       <p>
         A number of general architecture principles apply to all three bases of
@@ -3771,7 +3652,7 @@ architecture discussed in this document.</p>
     </div>
     <div class="section">
       <h2>
-        6. <a id="index" name="index">Glossary</a>
+	6. <a id="index">Glossary</a>
       </h2>
       <dl class="glossary">
         <dt>
@@ -3985,11 +3866,11 @@ architecture discussed in this document.</p>
     <div class="section">
       <div class="section">
         <h2>
-          7. <a id="refs" name="refs">References</a>
+	  7. <a id="refs">References</a>
         </h2>
         <dl>
           <dt>
-            <a name="CGI" id="CGI">CGI</a>
+	    <a id="CGI">CGI</a>
           </dt>
           <dd>
             <cite><a href=
@@ -3998,7 +3879,7 @@ architecture discussed in this document.</p>
             http://hoohoo.ncsa.uiuc.edu/cgi/interface.html.
           </dd>
           <dt>
-            <a name="CHIPS" id="CHIPS">CHIPS</a>
+	    <a id="CHIPS">CHIPS</a>
           </dt>
           <dd>
             <cite><a href="http://www.w3.org/TR/chips/">Common HTTP
@@ -4006,7 +3887,7 @@ architecture discussed in this document.</p>
             W3C Team Submission is available at http://www.w3.org/TR/chips/.
           </dd>
           <dt>
-            <a name="CUAP" id="CUAP">CUAP</a>
+	    <a id="CUAP">CUAP</a>
           </dt>
           <dd>
             <cite><a href="http://www.w3.org/TR/cuap">Common User Agent
@@ -4014,7 +3895,7 @@ architecture discussed in this document.</p>
             Submission is available at http://www.w3.org/TR/cuap.
           </dd>
           <dt>
-            <a name="Cool" id="Cool">Cool</a>
+	    <a id="Cool">Cool</a>
           </dt>
           <dd>
             <cite><a href="http://www.w3.org/Provider/Style/URI.html">Cool URIs
@@ -4024,7 +3905,7 @@ architecture discussed in this document.</p>
             they identify.
           </dd>
           <dt>
-            <a name="Eng90" id="Eng90">Eng90</a>
+	    <a id="Eng90">Eng90</a>
           </dt>
           <dd>
             <cite><a href=
@@ -4033,7 +3914,7 @@ architecture discussed in this document.</p>
             Engelbart, June 1990.
           </dd>
           <dt>
-            <a name="HTTPEXT" id="HTTPEXT">HTTPEXT</a>
+	    <a id="HTTPEXT">HTTPEXT</a>
           </dt>
           <dd>
             <cite><a href=
@@ -4044,7 +3925,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/Protocols/HTTP/ietf-http-ext/draft-frystyk-http-mandatory.
           </dd>
           <dt>
-            <a name="IANASchemes" id="IANASchemes">IANASchemes</a>
+	    <a id="IANASchemes">IANASchemes</a>
           </dt>
           <dd>
             IANA's <a href="http://www.iana.org/assignments/uri-schemes">online
@@ -4052,7 +3933,7 @@ architecture discussed in this document.</p>
             http://www.iana.org/assignments/uri-schemes.
           </dd>
           <dt>
-            <a name="IETFXML" id="IETFXML">IETFXML</a>
+	    <a id="IETFXML">IETFXML</a>
           </dt>
           <dd>
             IETF <cite><a href=
@@ -4066,7 +3947,7 @@ architecture discussed in this document.</p>
             list</a>.
           </dd>
           <dt>
-            <a name="INFOSET" id="INFOSET">INFOSET</a>
+	    <a id="INFOSET">INFOSET</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/xml-infoset">XML Information Set
@@ -4077,7 +3958,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/xml-infoset.
           </dd>
           <dt>
-            <a name="IRI" id="IRI">IRI</a>
+	    <a id="IRI">IRI</a>
           </dt>
           <dd>
             IETF <cite><a href=
@@ -4090,7 +3971,7 @@ architecture discussed in this document.</p>
             'Internationalized Resource Identifiers (IRIs)'</a>.
           </dd>
           <dt>
-            <a name="MEDIATYPEREG" id="MEDIATYPEREG">MEDIATYPEREG</a>
+	    <a id="MEDIATYPEREG">MEDIATYPEREG</a>
           </dt>
           <dd>
             IANA's <a href=
@@ -4099,7 +3980,7 @@ architecture discussed in this document.</p>
             http://www.iana.org/assignments/media-types/index.html.
           </dd>
           <dt>
-            <a name="OWL10" id="OWL10">OWL10</a>
+	    <a id="OWL10">OWL10</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/owl-ref/">OWL Web Ontology Language
@@ -4110,7 +3991,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/owl-ref/.
           </dd>
           <dt>
-            <a name="P3P10" id="P3P10">P3P10</a>
+	    <a id="P3P10">P3P10</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/P3P/">The Platform for Privacy
@@ -4121,7 +4002,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/P3P/.
           </dd>
           <dt>
-            <a name="RDDL" id="RDDL">RDDL</a>
+	    <a id="RDDL">RDDL</a>
           </dt>
           <dd>
             <cite><a href="http://www.tbray.org/tag/rddl/rddl3.html">Resource
@@ -4130,7 +4011,7 @@ architecture discussed in this document.</p>
             http://www.tbray.org/tag/rddl/rddl3.html.
           </dd>
           <dt>
-            <a name="RDFXML" id="RDFXML">RDFXML</a>
+	    <a id="RDFXML">RDFXML</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/rdf-syntax-grammar">RDF/XML Syntax
@@ -4141,14 +4022,14 @@ architecture discussed in this document.</p>
             version</a> available at http://www.w3.org/TR/rdf-syntax-grammar.
           </dd>
           <dt>
-            <a name="RELAXNG" id="RELAXNG">RELAXNG</a>
+	    <a id="RELAXNG">RELAXNG</a>
           </dt>
           <dd>
             The <a href="http://www.relaxng.org/">RELAX NG</a> schema language
             project.
           </dd>
           <dt>
-            <a name="REST" id="REST">REST</a>
+	    <a id="REST">REST</a>
           </dt>
           <dd>
             <cite><a href=
@@ -4164,7 +4045,7 @@ architecture discussed in this document.</p>
             http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm.
           </dd>
           <dt>
-            <a name="RFC2045" id="RFC2045">RFC2045</a>
+	    <a id="RFC2045">RFC2045</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2045.txt">RFC 2045:
@@ -4173,7 +4054,7 @@ architecture discussed in this document.</p>
             November 1996. Available at http://www.ietf.org/rfc/rfc2045.txt.
           </dd>
           <dt>
-            <a name="RFC2046" id="RFC2046">RFC2046</a>
+	    <a id="RFC2046">RFC2046</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2046.txt">RFC 2046:
@@ -4182,7 +4063,7 @@ architecture discussed in this document.</p>
             at http://www.ietf.org/rfc/rfc2046.txt.
           </dd>
           <dt>
-            <a name="RFC2119" id="RFC2119">RFC2119</a>
+	    <a id="RFC2119">RFC2119</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119:
@@ -4191,7 +4072,7 @@ architecture discussed in this document.</p>
             http://www.ietf.org/rfc/rfc2119.txt.
           </dd>
           <dt>
-            <a name="RFC2141" id="RFC2141">RFC2141</a>
+	    <a id="RFC2141">RFC2141</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2141.txt">RFC 2141:
@@ -4199,7 +4080,7 @@ architecture discussed in this document.</p>
             http://www.ietf.org/rfc/rfc2141.txt.
           </dd>
           <dt>
-            <a name="RFC2326" id="RFC2326">RFC2326</a>
+	    <a id="RFC2326">RFC2326</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2326.txt">RFC 2326:
@@ -4208,7 +4089,7 @@ architecture discussed in this document.</p>
             http://www.ietf.org/rfc/rfc2326.txt.
           </dd>
           <dt>
-            <a name="RFC2397" id="RFC2397">RFC2397</a>
+	    <a id="RFC2397">RFC2397</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2397.txt">RFC 2397:
@@ -4216,7 +4097,7 @@ architecture discussed in this document.</p>
             Available at: http://www.ietf.org/rfc/rfc2397.txt.
           </dd>
           <dt>
-            <a name="RFC2616" id="RFC2616">RFC2616</a>
+	    <a id="RFC2616">RFC2616</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2616.txt">RFC 2616:
@@ -4225,7 +4106,7 @@ architecture discussed in this document.</p>
             1999. Available at http://www.ietf.org/rfc/rfc2616.txt.
           </dd>
           <dt>
-            <a name="RFC2717" id="RFC2717">RFC2717</a>
+	    <a id="RFC2717">RFC2717</a>
           </dt>
           <dd>
             IETF <cite><a href=
@@ -4234,7 +4115,7 @@ architecture discussed in this document.</p>
             Available at http://www.ietf.org/rfc/rfc2717.txt.
           </dd>
           <dt>
-            <a name="RFC2718" id="RFC2718">RFC2718</a>
+	    <a id="RFC2718">RFC2718</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2718.txt">RFC 2718:
@@ -4243,7 +4124,7 @@ architecture discussed in this document.</p>
             http://www.ietf.org/rfc/rfc2718.txt.
           </dd>
           <dt>
-            <a name="RFC2818" id="RFC2818">RFC2818</a>
+	    <a id="RFC2818">RFC2818</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc2818.txt">RFC 2818:
@@ -4251,7 +4132,7 @@ architecture discussed in this document.</p>
             http://www.ietf.org/rfc/rfc2818.txt.
           </dd>
           <dt>
-            <a name="RFC3023" id="RFC3023">RFC3023</a>
+	    <a id="RFC3023">RFC3023</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc3023.txt">RFC 3023:
@@ -4259,7 +4140,7 @@ architecture discussed in this document.</p>
             January 2001. Available at: http://www.ietf.org/rfc/rfc3023.txt
           </dd>
           <dt>
-            <a name="RFC3236" id="RFC3236">RFC3236</a>
+	    <a id="RFC3236">RFC3236</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc3236.txt">RFC 3236:
@@ -4268,7 +4149,7 @@ architecture discussed in this document.</p>
             http://www.ietf.org/rfc/rfc3236.txt
           </dd>
           <dt>
-            <a name="RFC3261" id="RFC3261">RFC3261</a>
+	    <a id="RFC3261">RFC3261</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc3261.txt">RFC 3261:
@@ -4277,7 +4158,7 @@ architecture discussed in this document.</p>
             http://www.ietf.org/rfc/rfc3261.txt
           </dd>
           <dt>
-            <a name="RFC3920" id="RFC3920">RFC3920</a>
+	    <a id="RFC3920">RFC3920</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc3920.txt">RFC 3920:
@@ -4286,7 +4167,7 @@ architecture discussed in this document.</p>
             http://www.ietf.org/rfc/rfc3920.txt
           </dd>
           <dt>
-            <a name="RFC977" id="RFC977">RFC977</a>
+	    <a id="RFC977">RFC977</a>
           </dt>
           <dd>
             IETF <cite><a href="http://www.ietf.org/rfc/rfc977.txt">RFC 977:
@@ -4294,7 +4175,7 @@ architecture discussed in this document.</p>
             February 1986. Available at http://www.ietf.org/rfc/rfc977.txt.
           </dd>
           <dt>
-            <a name="SOAP12" id="SOAP12">SOAP12</a>
+	    <a id="SOAP12">SOAP12</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/soap12-part1/">SOAP Version 1.2 Part
@@ -4306,7 +4187,7 @@ architecture discussed in this document.</p>
             at http://www.w3.org/TR/soap12-part1/.
           </dd>
           <dt>
-            <a name="SVG11" id="SVG11">SVG11</a>
+	    <a id="SVG11">SVG11</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/SVG11/">Scalable Vector Graphics
@@ -4317,7 +4198,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/SVG11/.
           </dd>
           <dt>
-            <a name="UNICODE" id="UNICODE">UNICODE</a>
+	    <a id="UNICODE">UNICODE</a>
           </dt>
           <dd>
             See the <a href="http://www.unicode.org/">Unicode Consortium home
@@ -4325,7 +4206,7 @@ architecture discussed in this document.</p>
             character repertoires.
           </dd>
           <dt>
-            <a name="URI" id="URI">URI</a>
+	    <a id="URI">URI</a>
           </dt>
           <dd>
             <cite>Uniform Resource Identifiers (URI): Generic Syntax</cite> (T.
@@ -4336,7 +4217,7 @@ architecture discussed in this document.</p>
             Resource Identifier (URI): Generic Syntax</a>."
           </dd>
           <dt>
-            <a name="UniqueDNS" id="UniqueDNS">UniqueDNS</a>
+	    <a id="UniqueDNS">UniqueDNS</a>
           </dt>
           <dd>
             <cite><a href=
@@ -4346,7 +4227,7 @@ architecture discussed in this document.</p>
             http://www.icann.org/correspondence/iab-tech-comment-27sept99.htm.
           </dd>
           <dt>
-            <a name="VOICEXML2" id="VOICEXML2">VOICEXML2</a>
+	    <a id="VOICEXML2">VOICEXML2</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/voicexml20">Voice Extensible Markup
@@ -4358,7 +4239,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/voicexml20.
           </dd>
           <dt>
-            <a name="XHTML11" id="XHTML11">XHTML11</a>
+	    <a id="XHTML11">XHTML11</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/xhtml11/">XHTML™ 1.1 - Module-based
@@ -4369,7 +4250,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/xhtml11/.
           </dd>
           <dt>
-            <a name="XLink10" id="XLink10">XLink10</a>
+	    <a id="XLink10">XLink10</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/xlink/">XML Linking Language (XLink)
@@ -4391,7 +4272,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/xml-id/.
           </dd>
           <dt>
-            <a name="XML10" id="XML10">XML10</a>
+	    <a id="XML10">XML10</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/REC-xml">Extensible Markup Language
@@ -4403,7 +4284,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/REC-xml.
           </dd>
           <dt>
-            <a name="XML11" id="XML11">XML11</a>
+	    <a id="XML11">XML11</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/xml11/">Extensible Markup Language
@@ -4414,7 +4295,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/xml11/.
           </dd>
           <dt>
-            <a name="XMLNS" id="XMLNS">XMLNS</a>
+	    <a id="XMLNS">XMLNS</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/xml-names11/">Namespaces in XML
@@ -4425,7 +4306,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/xml-names11/.
           </dd>
           <dt>
-            <a name="XMLSCHEMA" id="XMLSCHEMA">XMLSCHEMA</a>
+	    <a id="XMLSCHEMA">XMLSCHEMA</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/xmlschema-1/">XML Schema Part 1:
@@ -4436,7 +4317,7 @@ architecture discussed in this document.</p>
             http://www.w3.org/TR/xmlschema-1/.
           </dd>
           <dt>
-            <a name="XPTRFR" id="XPTRFR">XPTRFR</a>
+	    <a id="XPTRFR">XPTRFR</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/xptr-framework/">XPointer
@@ -4447,7 +4328,7 @@ architecture discussed in this document.</p>
             at http://www.w3.org/TR/xptr-framework/.
           </dd>
           <dt>
-            <a name="XSLT10" id="XSLT10">XSLT10</a>
+	    <a id="XSLT10">XSLT10</a>
           </dt>
           <dd>
             <a href="http://www.w3.org/TR/xslt">XSL Transformations (XSLT)
@@ -4460,12 +4341,11 @@ architecture discussed in this document.</p>
         </dl>
         <div class="section">
           <h3>
-            7.1. <a name="archspecs" id="archspecs">Architectural
-            Specifications</a>
+	    7.1. <a id="archspecs">Architectural Specifications</a>
           </h3>
           <dl>
             <dt>
-              <a name="ATAG10" id="ATAG10">ATAG10</a>
+	      <a id="ATAG10">ATAG10</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/ATAG10">Authoring Tool
@@ -4477,7 +4357,7 @@ architecture discussed in this document.</p>
               http://www.w3.org/TR/ATAG10.
             </dd>
             <dt>
-              <a name="CHARMOD" id="CHARMOD">CHARMOD</a>
+	      <a id="CHARMOD">CHARMOD</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/charmod/">Character Model for the
@@ -4489,7 +4369,7 @@ architecture discussed in this document.</p>
               http://www.w3.org/TR/charmod/.
             </dd>
             <dt>
-              <a name="DIPRINCIPLES" id="DIPRINCIPLES">DIPRINCIPLES</a>
+	      <a id="DIPRINCIPLES">DIPRINCIPLES</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/di-princ/">Device Independence
@@ -4500,7 +4380,7 @@ architecture discussed in this document.</p>
               http://www.w3.org/TR/di-princ/.
             </dd>
             <dt>
-              <a name="EXTLANG" id="EXTLANG">EXTLANG</a>
+	      <a id="EXTLANG">EXTLANG</a>
             </dt>
             <dd>
               <cite><a href=
@@ -4510,7 +4390,7 @@ architecture discussed in this document.</p>
               http://www.w3.org/TR/1998/NOTE-webarch-extlang-19980210.
             </dd>
             <dt>
-              <a name="Fielding" id="Fielding">Fielding</a>
+	      <a id="Fielding">Fielding</a>
             </dt>
             <dd>
               <cite><a href=
@@ -4523,7 +4403,7 @@ architecture discussed in this document.</p>
               http://www.ics.uci.edu/~fielding/pubs/webarch_icse2000.pdf.
             </dd>
             <dt>
-              <a name="QA" id="QA">QA</a>
+	      <a id="QA">QA</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/qaframe-spec/">QA Framework:
@@ -4535,7 +4415,7 @@ architecture discussed in this document.</p>
               at http://www.w3.org/TR/qaframe-spec/.
             </dd>
             <dt>
-              <a name="RFC1958" id="RFC1958">RFC1958</a>
+	      <a id="RFC1958">RFC1958</a>
             </dt>
             <dd>
               IETF <cite><a href="http://www.ietf.org/rfc/rfc1958.txt">RFC
@@ -4544,7 +4424,7 @@ architecture discussed in this document.</p>
               http://www.ietf.org/rfc/rfc1958.txt.
             </dd>
             <dt>
-              <a name="SPECVAR" id="SPECVAR">SPECVAR</a>
+	      <a id="SPECVAR">SPECVAR</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/spec-variability/">Variability in
@@ -4555,7 +4435,7 @@ architecture discussed in this document.</p>
               available at http://www.w3.org/TR/spec-variability/.
             </dd>
             <dt>
-              <a name="UAAG10" id="UAAG10">UAAG10</a>
+	      <a id="UAAG10">UAAG10</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/UAAG10/">User Agent Accessibility
@@ -4566,7 +4446,7 @@ architecture discussed in this document.</p>
               http://www.w3.org/TR/UAAG10/.
             </dd>
             <dt>
-              <a name="WCAG20" id="WCAG20">WCAG20</a>
+	      <a id="WCAG20">WCAG20</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility
@@ -4578,7 +4458,7 @@ architecture discussed in this document.</p>
               http://www.w3.org/TR/WCAG20/.
             </dd>
             <dt>
-              <a name="WSA" id="WSA">WSA</a>
+	      <a id="WSA">WSA</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/ws-arch/">Web Services
@@ -4589,7 +4469,7 @@ architecture discussed in this document.</p>
               http://www.w3.org/TR/ws-arch/.
             </dd>
             <dt>
-              <a name="XAG" id="XAG">XAG</a>
+	      <a id="XAG">XAG</a>
             </dt>
             <dd>
               <a href="http://www.w3.org/TR/xag">XML Accessibility
@@ -4606,7 +4486,7 @@ architecture discussed in this document.</p>
     </div>
     <div class="section">
       <h2>
-        8. <a name="acks" id="acks">Acknowledgments</a>
+	8. <a id="acks">Acknowledgments</a>
       </h2>
       <p>
         This document was authored by the W3C Technical Architecture Group
