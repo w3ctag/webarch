@@ -1,4 +1,4 @@
-awww
+awww2e
 ====
 
-The Architecture of the World Wide Web - Living Document
+The Architecture of the World Wide Web (Second Edition) - Living Document
