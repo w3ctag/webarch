@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
     <title>
       Architecture of the World Wide Web (Second Edition), Living Document
     </title>
-    <script src="http://www.w3.org/Tools/respec/respec-w3c-common" class=
-    "remove">
+    <script class="remove" src=
+    "http://www.w3.org/Tools/respec/respec-w3c-common">
 </script>
-    <script class='remove'>
+    <script class="remove">
 var respecConfig = {
     specStatus: "unofficial",
     shortName: "webarch",
@@ -373,8 +373,9 @@ var respecConfig = {
         resource, and representation.
       </p>
       <figure>
-        <img src="images/uri-res-rep.png" alt=
-        "A resource (Oaxaca Weather Info) is identified by a particular URI and is represented by pseudo-HTML content">
+        <img alt=
+        "A resource (Oaxaca Weather Info) is identified by a particular URI and is represented by pseudo-HTML content"
+        src="images/uri-res-rep.png">
         <figcaption>
           In the remainder of this document, we highlight important
           architectural points regarding Web identifiers, protocols, and
@@ -1603,9 +1604,9 @@ var respecConfig = {
             HTTP [[!RFC2616]], for example) does not account for fragments.
           </p>
         </section>
-	<section id="frag-coneg">
+        <section id="frag-coneg">
           <h4>
-	    Fragment identifiers and content negotiation
+            Fragment identifiers and content negotiation
           </h4>
           <p>
             <dfn>Content negotiation</dfn> refers to the practice of making
@@ -1676,8 +1677,8 @@ var respecConfig = {
         </section>
       </section>
       <section>
-	<h3 id="metadata-inconsistencies">
-	  Inconsistencies between Representation Data and Metadata
+        <h3 id="metadata-inconsistencies">
+          Inconsistencies between Representation Data and Metadata
         </h3>
         <p>
           Successful communication between two parties depends on a reasonably
@@ -1780,7 +1781,7 @@ var respecConfig = {
       </section>
       <section id="safe-interaction">
         <h3>
-	  Safe Interactions
+          Safe Interactions
         </h3>
         <p>
           Nadia's retrieval of weather information (an example of a read-only
@@ -1870,9 +1871,9 @@ var respecConfig = {
           "http://www.w3.org/2001/tag/doc/whenToUseGet.html">URIs,
           Addressability, and the use of HTTP GET and POST</a>"</cite>.
         </p>
-	<section id="unsafe-accountability">
+        <section id="unsafe-accountability">
           <h4>
-	    Unsafe interactions and accountability
+            Unsafe interactions and accountability
           </h4>
           <div class="boxedtext">
             <p>
@@ -1912,7 +1913,7 @@ var respecConfig = {
       </section>
       <section id="representation-management">
         <h3>
-	  Representation Management
+          Representation Management
         </h3>
         <div class="boxedtext">
           <p>
@@ -1966,7 +1967,7 @@ var respecConfig = {
             "pr-implied-dereference">Reference does not imply
             dereference</a></span>
           </p>
-          <p id="implied-dereference" class="principle">
+          <p class="principle" id="implied-dereference">
             An application developer or specification author SHOULD NOT require
             networked retrieval of representations each time they are
             referenced.
@@ -1985,9 +1986,9 @@ var respecConfig = {
           resources</a>, and <a href="#supporting-navigation">supporting
           navigation</a>.
         </p>
-	<section id="URI-persistence">
+        <section id="URI-persistence">
           <h4>
-	    URI persistence
+            URI persistence
           </h4>
           <p>
             As is the case with many human interactions, confidence in
@@ -2041,9 +2042,9 @@ var respecConfig = {
             "#Cool">Cool</a>].
           </p>
         </section>
-	<section id="id-access">
+        <section id="id-access">
           <h4>
-	    Linking and access control
+            Linking and access control
           </h4>
           <p>
             It is reasonable to limit access to a resource (for commercial or
@@ -2092,9 +2093,9 @@ var respecConfig = {
             the World Wide Web</a>"</cite>.
           </p>
         </section>
-	<section id="supporting-navigation">
+        <section id="supporting-navigation">
           <h4>
-	    Supporting Navigation
+            Supporting Navigation
           </h4>
           <p>
             It is a strength of Web Architecture that links can be made and
@@ -2143,7 +2144,7 @@ var respecConfig = {
       </section>
       <section id="interaction-future">
         <h3>
-	  Future Directions for Interaction
+          Future Directions for Interaction
         </h3>
         <p>
           There remain open questions regarding Web interactions. The TAG
@@ -2158,7 +2159,7 @@ var respecConfig = {
     </section>
     <section id="formats">
       <h2>
-	Data Formats
+        Data Formats
       </h2>
       <p>
         A data format specification (for example, for XHTML, RDF/XML, SMIL,
@@ -2194,7 +2195,7 @@ var respecConfig = {
       </p>
       <section id="binary">
         <h3>
-	  Binary and Textual Data Formats
+          Binary and Textual Data Formats
         </h3>
         <p>
           Binary data formats are those in which portions of the data are
@@ -2260,7 +2261,7 @@ var respecConfig = {
       </section>
       <section id="ext-version">
         <h3>
-	  Versioning and Extensibility
+          Versioning and Extensibility
         </h3>
         <p>
           In a perfect world, language designers would invent languages that
@@ -2296,9 +2297,9 @@ var respecConfig = {
           and for handling versioning. See also "Web Architecture: Extensible
           Languages" [[!EXTLANG]].
         </p>
-	<section id="versioning">
+        <section id="versioning">
           <h4>
-	    Versioning
+            Versioning
           </h4>
           <p>
             There is typically a (long) transition period during which multiple
@@ -2315,9 +2316,9 @@ var respecConfig = {
             </p>
           </div>
         </section>
-	<section id="versioning-xmlns">
+        <section id="versioning-xmlns">
           <h4>
-	    Versioning and XML namespace policy
+            Versioning and XML namespace policy
           </h4>
           <div class="boxedtext">
             <p>
@@ -2396,9 +2397,9 @@ var respecConfig = {
             URI has the authority to decide the namespace change policy.
           </p>
         </section>
-	<section id="extensibility">
+        <section id="extensibility">
           <h4>
-	    Extensibility
+            Extensibility
           </h4>
           <p>
             Requirements change over time. Successful technologies are adopted
@@ -2499,9 +2500,9 @@ var respecConfig = {
             Extensibility and Extensions</a>” in [[!QA]].
           </p>
         </section>
-	<section id="composition">
+        <section id="composition">
           <h4>
-	    Composition of data formats
+            Composition of data formats
           </h4>
           <p>
             Many modern data format include mechanisms for composition. For
@@ -2550,7 +2551,7 @@ var respecConfig = {
       </section>
       <section id="pci">
         <h3>
-	  Separation of Content, Presentation, and Interaction
+          Separation of Content, Presentation, and Interaction
         </h3>
         <p>
           The Web is a heterogeneous environment where a wide variety of agents
@@ -2650,7 +2651,7 @@ var respecConfig = {
       </section>
       <section id="hypertext">
         <h3>
-	  Hypertext
+          Hypertext
         </h3>
         <p>
           A defining characteristic of the Web is that it allows embedded
@@ -2724,9 +2725,9 @@ var respecConfig = {
           Data formats that do not allow content authors to create hypertext
           links lead to the creation of "terminal nodes" on the Web.
         </p>
-	<section id="uri-refs">
+        <section id="uri-refs">
           <h4>
-	    URI references
+            URI references
           </h4>
           <p>
             Links are commonly expressed using <dfn>URI references</dfn>
@@ -2750,7 +2751,7 @@ var respecConfig = {
       </section>
       <section id="xml-formats">
         <h3>
-	  XML-Based Data Formats
+          XML-Based Data Formats
         </h3>
         <p>
           Many data formats are <dfn>XML-based</dfn>, that is to say they
@@ -2772,9 +2773,9 @@ var respecConfig = {
           that lower barriers to Web accessibility for people with
           disabilities.
         </p>
-	<section id="xml-when">
+        <section id="xml-when">
           <h4>
-	    When to use an XML-based format
+            When to use an XML-based format
           </h4>
           <p>
             XML defines textual data formats that are naturally suited to
@@ -2810,9 +2811,9 @@ var respecConfig = {
             </li>
           </ol>
         </section>
-	<section id="xml-links">
+        <section id="xml-links">
           <h4>
-	    Links in XML
+            Links in XML
           </h4>
           <p>
             Sophisticated linking mechanisms have been invented for XML
@@ -2836,9 +2837,9 @@ var respecConfig = {
             "http://www.w3.org/2001/tag/issues.html#xlinkScope-23">xlinkScope-23</a>.
           </p>
         </section>
-	<section id="xml-namespaces">
+        <section id="xml-namespaces">
           <h4>
-	    XML namespaces
+            XML namespaces
           </h4>
           <p>
             The purpose of an XML namespace (defined in [<a href=
@@ -2921,9 +2922,9 @@ var respecConfig = {
             that are not anticipated by [[!XMLNS]].
           </p>
         </section>
-	<section id="namespace-document">
+        <section id="namespace-document">
           <h4>
-	    Namespace documents
+            Namespace documents
           </h4>
           <div class="boxedtext">
             <p>
@@ -3022,9 +3023,9 @@ var respecConfig = {
             identify abstract components).
           </p>
         </section>
-	<section id="xml-qnames">
+        <section id="xml-qnames">
           <h4>
-	    QNames in XML
+            QNames in XML
           </h4>
           <p>
             Section 3 of "Namespaces in XML" [<a href="#XMLNS">XMLNS</a>]
@@ -3096,9 +3097,9 @@ var respecConfig = {
             identify abstract components).
           </p>
         </section>
-	<section id="xml-id-semantics">
+        <section id="xml-id-semantics">
           <h4>
-	    XML ID semantics
+            XML ID semantics
           </h4>
           <p>
             Consider the following fragment of XML: <code>&lt;section
@@ -3154,9 +3155,9 @@ var respecConfig = {
             "#xml-id">XML-ID</a>] for a solution under development.
           </p>
         </section>
-	<section id="xml-media-types">
+        <section id="xml-media-types">
           <h4>
-	    Media types for XML
+            Media types for XML
           </h4>
           <p>
             RFC 3023 defines the Internet media types "application/xml" and
@@ -3202,9 +3203,9 @@ var respecConfig = {
             </p>
           </div>
         </section>
-	<section id="xml-fragids">
+        <section id="xml-fragids">
           <h4>
-	    Fragment identifiers in XML
+            Fragment identifiers in XML
           </h4>
           <p>
             The section on <a href="#media-type-fragid">media types and
@@ -3239,7 +3240,7 @@ var respecConfig = {
       </section>
       <section id="media-types-infospace">
         <h3>
-	  Future Directions for Data Formats
+          Future Directions for Data Formats
         </h3>
         <p>
           Data formats enable the creation of new applications to make use of
@@ -3254,7 +3255,7 @@ var respecConfig = {
     </section>
     <section id="general">
       <h2>
-	General Architecture Principles
+        General Architecture Principles
       </h2>
       <p>
         A number of general architecture principles apply to all three bases of
@@ -3262,7 +3263,7 @@ var respecConfig = {
       </p>
       <section id="orthogonal-specs">
         <h3>
-	  Orthogonal Specifications
+          Orthogonal Specifications
         </h3>
         <p>
           Identification, interaction, and representation are orthogonal
@@ -3331,7 +3332,7 @@ var respecConfig = {
       </section>
       <section id="language-extensibility">
         <h3>
-	  Extensibility
+          Extensibility
         </h3>
         <p>
           The information in the Web and the technologies used to represent
@@ -3414,7 +3415,7 @@ var respecConfig = {
       </section>
       <section id="error-handling">
         <h3>
-	  Error Handling
+          Error Handling
         </h3>
         <p>
           Errors occur in networked information systems. An error condition can
@@ -3490,7 +3491,7 @@ var respecConfig = {
       </section>
       <section id="protocol-interop">
         <h3>
-	  Protocol-based Interoperability
+          Protocol-based Interoperability
         </h3>
         <p>
           The Web follows Internet tradition in that its important interfaces
@@ -3516,7 +3517,7 @@ var respecConfig = {
     </section>
     <section id="index">
       <h2>
-	Glossary
+        Glossary
       </h2>
       <dl class="glossary">
         <dt>
@@ -3725,12 +3726,12 @@ var respecConfig = {
           <span class="content">One that conforms to the syntax rules defined
           in the XML specification.</span>
         </dd>
-      </dl><!-- Generated -->
+      </dl>
     </section>
     <section>
       <section id="refs">
         <h2>
-	  References
+          References
         </h2>
         <dl>
           <dt>
@@ -4345,9 +4346,9 @@ var respecConfig = {
             </dd>
           </dl>
         </section>
-      </section><!-- Included; see Makefile -->
+      </section>
     </section>
-    <section id="acknowledgments" class="informative">
+    <section class="informative" id="acknowledgments">
       <h2>
         Acknowledgments
       </h2>
