@@ -1,4 +1,4 @@
-awww2e
+webarch
 ====
 
-The Architecture of the World Wide Web (Second Edition) - Living Document
+The Architecture of the World Wide Web (Second Edition)
