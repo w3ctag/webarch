@@ -1,0 +1,7 @@
+.del { background-color: #ffbbbb }
+.del:before { content: "\002193" } /* down-arrow */
+.del:after { content: "\002193" }
+.ins { background-color: #bbffbb }
+.ins:before { content: "\002191" } /* up-arrow */
+.ins:after { content: "\002191" }
+

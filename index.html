@@ -53,9 +53,9 @@ var respecConfig = {
     inlineCSS: true,
     noIDLIn: true,
     noLegacyStyle: false,
-    extraCSS: ["../ReSpec.js/css/respec.css"],
     };
     </script>
+    <link href="editorial.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <section id="abstract">
@@ -63,19 +63,23 @@ var respecConfig = {
         The World Wide Web uses relatively simple technologies with sufficient
         scalability, efficiency and utility that they have resulted in a
         remarkable information space of interrelated resources, growing across
-        languages, cultures, and media. In an effort to preserve these
-        properties of the information space as the technologies evolve, this
-        architecture document discusses the core design components of the Web.
-        They are identification of resources, representation of resource state,
-        and the protocols that support the interaction between agents and
-        resources in the space. We relate core design components, constraints,
-        and good practices to the principles and properties they support.
+        languages, cultures<span class="del">,</span> and media. In an effort
+        to preserve these properties of the information space as the
+        technologies evolve, this architecture document discusses the core
+        design components of the Web. They are identification of resources,
+        representation of resource state, and the protocols that support the
+        interaction between agents and resources in the space. We relate core
+        design components, constraints, and good practices to the principles
+        and properties they support.
       </p>
     </section>
     <section id="sotd">
-      <p>
+      <p class="ins">
         This is an unofficial draft and work in progress. It has no official
-        standing.
+        standing: rather it represents a trial balloon to help the <a href=
+        "http://www.w3.org/2001/tag/">TAG</a> decide whether to proceed with a
+        second edition of <a href="http://www.w3.org/TR/webarch/">AWWW</a> or
+        not.
       </p>
       <p>
         <em>This section describes the status of this document at the time of
@@ -96,15 +100,19 @@ var respecConfig = {
       </p>
       <p>
         This document uses concepts and terms regarding URIs as defined by the
-        IETF. In an <a href=
+        IETF. <span class="del">In an <a href=
         "http://www1.ietf.org/mail-archive/web/ietf-announce/current/msg00602.html">
         18 Oct 2004 announcement</a>, the revision of RFC2396 was endorsed as
         an IETF Specification, though the latest published draft as of this
         writing is <a href=
-        "http://www.apache.org/~fielding/uri/rev-2002/rfc2396bis.html">draft-fielding-uri-rfc2396bis-07</a>.
-        The <a href="#URI">[URI]</a> citation should reflect publication of the
-        relevant RFC in future revisions.
+        "http://www.apache.org/~fielding/uri/rev-2002/rfc2396bis.html">draft-fielding-uri-rfc2396bis-07</a>.</span>
+        The <a href="#URI">[URI]</a> <span class="del">citation should reflect
+        publication of the relevant RFC in future revisions</span><span class=
+        "ins">specification is the primary normative reference</span>.
       </p>
+      <div class="note" title="(Editorial)">
+        What should we say here about HTTPbis, if anything?
+      </div>
     </section>
     <section id="principles">
       <h3>
