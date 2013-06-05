@@ -477,7 +477,7 @@ var respecConfig = {
             user agent, the user agent retrieves and presents data, the user
             follows another link, etc. This document does not discuss in any
             detail other interaction models such as voice browsing (see, for
-            example, [[!VOICEXML2]]). The choice of interaction model may have
+            example, [[!VOICEXML20]]). The choice of interaction model may have
             an impact on expected agent behavior. For instance, when a
             graphical user agent running on a laptop computer or hand-held
             device encounters an error, the user agent can report errors
@@ -674,7 +674,7 @@ var respecConfig = {
           divided into <a>schemes</a> that define, via their scheme
           specification, the mechanism by which scheme-specific identifiers are
           associated with resources. For example, the "http" URI scheme
-          ([[!RFC2616]]) uses DNS and TCP-based HTTP servers for the purpose of
+          ([[!HTTP11]]) uses DNS and TCP-based HTTP servers for the purpose of
           identifier allocation and resolution. As a result, identifiers such
           as "http://example.com/somepath#someFrag" often take on meaning
           through the community experience of performing an HTTP GET request on
@@ -964,7 +964,7 @@ var respecConfig = {
             as server-side redirects to relate the two resources. The community
             benefits when the URI owner supports redirection of an aliased URI
             to the corresponding "official" URI. For more information on
-            redirection, see section 10.3, Redirection, in [[!RFC2616]]. See
+            redirection, see section 10.3, Redirection, in [[!HTTP11]]. See
             also [[!CHIPS]] for a discussion of some best practices for server
             administrators.
           </p>
@@ -1087,7 +1087,7 @@ var respecConfig = {
             maintains a registry [[!IANASchemes]] of mappings between URI
             scheme names and scheme specifications. For instance, the IANA
             registry indicates that the "http" scheme is defined in
-            [[!RFC2616]]. The process for registering a new URI scheme is
+            [[!HTTP11]]. The process for registering a new URI scheme is
             defined in [[!RFC2717]].
           </p>
           <p>
@@ -1357,7 +1357,7 @@ var respecConfig = {
           of a resource, whereas a hypertext link checker might use HTTP HEAD
           on the same URI simply to establish whether a representation is
           available. Some URI schemes set expectations about available access
-          methods, others (such as the URN scheme [[!RFC2141]]) do not. Section
+          methods, others (such as the URN scheme [[!URN]]) do not. Section
           1.2.2 of [[!URI]] discusses the separation of identification and
           interaction in more detail. For more information about relationships
           between multiple access methods and URI addressability, see the TAG
@@ -1436,15 +1436,15 @@ var respecConfig = {
             example is "http".
             </li>
             <li>[[!IANASchemes]] states that the "http" scheme is defined by
-            the HTTP/1.1 specification (RFC 2616 [[!RFC2616]], section 3.2.2).
+            the HTTP/1.1 specification (RFC 2616 [[!HTTP11]], section 3.2.2).
             </li>
             <li>In this SVG context, the agent constructs an HTTP GET request
-            (per section 9.3 of [[!RFC2616]]) to retrieve the representation.
+            (per section 9.3 of [[!HTTP11]]) to retrieve the representation.
             </li>
-            <li>Section 6 of [[!RFC2616]] defines how the server constructs a
+            <li>Section 6 of [[!HTTP11]] defines how the server constructs a
             corresponding response message, including the 'Content-Type' field.
             </li>
-            <li>Section 1.4 of [[!RFC2616]] states "HTTP communication usually
+            <li>Section 1.4 of [[!HTTP11]] states "HTTP communication usually
             takes place over TCP/IP connections." This example addresses
             neither that step in the process nor other steps such as Domain
             Name System (<abbr>DNS</abbr>) resolution.
@@ -1607,7 +1607,7 @@ var respecConfig = {
             passed to other systems during the process of retrieval. This means
             that some intermediaries in Web architecture (such as proxies) have
             no interaction with fragment identifiers and that redirection (in
-            HTTP [[!RFC2616]], for example) does not account for fragments.
+            HTTP [[!HTTP11]], for example) does not account for fragments.
           </p>
         </section>
         <section id="frag-coneg">
@@ -1806,7 +1806,7 @@ var respecConfig = {
           newsletter, posting to a list, or modifying a database.
           <strong>Note:</strong> In this context, the word "unsafe" does not
           necessarily mean "dangerous"; the term "safe" is used in section
-          9.1.1 of [[!RFC2616]] and "unsafe" is the natural opposite.
+          9.1.1 of [[!HTTP11]] and "unsafe" is the natural opposite.
         </p>
         <div class="boxedtext">
           <p>
@@ -1913,7 +1913,7 @@ var respecConfig = {
             results, HTTP allows representation providers to associate a URI
             with the results of an HTTP POST request using the
             "Content-Location" header (described in section 14.14 of
-            [[!RFC2616]]).
+            [[!HTTP11]]).
           </p>
         </section>
       </section>
@@ -2028,7 +2028,7 @@ var respecConfig = {
             persistent or that they will not be persistent.
           </p>
           <p>
-            HTTP [[!RFC2616]] has been designed to help manage URI persistence.
+            HTTP [[!HTTP11]] has been designed to help manage URI persistence.
             For example, HTTP redirection (using the 3xx response codes)
             permits servers to tell an agent that further action needs to be
             taken by the agent in order to fulfill the request (for example, a
@@ -2671,7 +2671,7 @@ var respecConfig = {
         <p>
           When one resource (representation) refers to another resource with a
           URI, this constitutes a <dfn>link</dfn> between the two resources.
-          Additional metadata may also form part of the link (see [[!XLink10]],
+          Additional metadata may also form part of the link (see [[!XLINK10]],
           for example). <strong>Note:</strong> In this document, the term
           "link" generally means "relationship", not "physical connection".
         </p>
@@ -2824,7 +2824,7 @@ var respecConfig = {
           <p>
             Sophisticated linking mechanisms have been invented for XML
             formats. XPointer allows links to address content that does not
-            have an explicit, named anchor. [[!XLink]] is an appropriate
+            have an explicit, named anchor. [[!XLINK10]] is an appropriate
             specification for representing links in <a href=
             "#hypertext">hypertext</a> XML applications. XLink allows links to
             have multiple ends and to be expressed either inline or in "link
@@ -3012,7 +3012,7 @@ var respecConfig = {
           </div>
           <p>
             For example, the following are examples of data formats for
-            namespace documents: [[!OWL10]], [[!RDDL]], [[!XMLSCHEMA]], and
+            namespace documents: [[!OWL10]], [[!RDDL]], [[!XMLSCHEMA-1]], and
             [[!XHTML11]]. Each of these formats meets different requirements
             described above for satisfying the needs of an agent that wants
             more information about the namespace. Note, however, issues related
