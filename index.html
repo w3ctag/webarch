@@ -81,6 +81,12 @@ var respecConfig = {
         second edition of <a href="http://www.w3.org/TR/webarch/">AWWW</a> or
         not.
       </p>
+      <div class="note" title="(Editorial)">
+        This draft highlights most differences from the first edition of
+        <a href="http://www.w3.org/TR/webarch/">AWWW</a>, with <span class=
+        "del">deletions presented like this</span> and <span class=
+        "ins">insertions presented like this</span>.
+      </div>
       <p>
         <em>This section describes the status of this document at the time of
         its publication. Other documents may supersede this document. A list of
@@ -99,8 +105,9 @@ var respecConfig = {
         of Volume Two as a Recommendation.
       </p>
       <p>
-        This document uses concepts and terms regarding URIs as defined by the
-        IETF. <span class="del">In an <a href=
+        This document uses concepts and terms regarding URIs <span class=
+        "ins">in general, and <code>http:</code> URIs in particular,</span> as
+        defined by the IETF. <span class="del">In an <a href=
         "http://www1.ietf.org/mail-archive/web/ietf-announce/current/msg00602.html">
         18 Oct 2004 announcement</a>, the revision of RFC2396 was endorsed as
         an IETF Specification, though the latest published draft as of this
@@ -108,10 +115,16 @@ var respecConfig = {
         "http://www.apache.org/~fielding/uri/rev-2002/rfc2396bis.html">draft-fielding-uri-rfc2396bis-07</a>.</span>
         The <a href="#URI">[URI]</a> <span class="del">citation should reflect
         publication of the relevant RFC in future revisions</span><span class=
-        "ins">specification is the primary normative reference</span>.
+        "ins">specification is the primary normative reference for URIs in
+        general. For <code>http:</code> (and <code>https:</code>, and the HTTP
+        protocol), [[!HTTP11]] is the specification currently in force, but
+        [[!HTTPbis]], which will update it, is nearing final approval, and we
+        assume it will be in force by the time this second edition is
+        completed</span>.
       </p>
       <div class="note" title="(Editorial)">
-        What should we say here about HTTPbis, if anything?
+        The references and caveats wrt HTTP(bis) above will need to be
+        corrected as and when HTTPbis is approved HTTP11.2e, or whatever.
       </div>
     </section>
     <section id="principles">
