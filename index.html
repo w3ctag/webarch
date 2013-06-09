@@ -10,131 +10,183 @@
     "http://www.w3.org/Tools/respec/respec-w3c-common">
 </script>
     <script class="remove">
-var respecConfig = {
-    specStatus: "ED",
-    shortName: "webarch",
-    //publishDate:  "2012-12-12",
-    //previousPublishDate:  "",
-    edDraftURI: "http://w3ctag.github.io/webarch/",
-    // lcEnd: "3000-01-01",
-    // crEnd: "3000-01-01",
-    editors: [{
-            name: "Ian Jacobs",
-            company: "W3C",
-            companyURL: "http://www.w3.org/",
-            note: "First Edition"
-        },
-        {
-          name: "Henry S. Thompson",
-          company: "University of Edinburgh",
-          companyURL: "http://www.inf.ed.ac.uk/",
-          note: "Second Edition"
-         }
-    ],
-    wg: "Technical Architecture Group",
-    wgURI: "http://www.w3.org/2001/tag/",
-    wgPublicList: "www-tag",
-    wgPatentURI: "http://www.w3.org/2001/tag/disclosures",
-    otherLinks: [{
-            key: "Repository",
-            data: [{
-                    value: "We are on Github.",
-                    href: "https://github.com/w3ctag/webarch"
-                }, {
-                    value: "File a bug.",
-                    href: "https://github.com/w3ctag/webarch/issues"
-                }, {
-                    value: "Commit history.",
-                    href: "https://github.com/w3ctag/webarch/commits/gh-pages"
-                }
-            ]
+//this line stops tidy5 from screwing up code formatting.
+    var respecConfig = {
+        specStatus: "ED",
+        shortName: "webarch",
+        //publishDate:  "2012-12-12",
+        //previousPublishDate:  "",
+        edDraftURI: "http://w3ctag.github.io/webarch/",
+        // lcEnd: "3000-01-01",
+        // crEnd: "3000-01-01",
+        editors: [{
+                name: "Ian Jacobs",
+                company: "W3C",
+                companyURL: "http://www.w3.org/",
+                note: "First Edition"
+            }, {
+                name: "Henry S. Thompson",
+                company: "University of Edinburgh",
+                companyURL: "http://www.inf.ed.ac.uk/",
+                note: "Second Edition"
+            }
+        ],
+        wg: "Technical Architecture Group",
+        wgURI: "http://www.w3.org/2001/tag/",
+        wgPublicList: "www-tag",
+        wgPatentURI: "http://www.w3.org/2001/tag/disclosures",
+        otherLinks: [{
+                key: "Repository",
+                data: [{
+                        value: "We are on Github.",
+                        href: "https://github.com/w3ctag/webarch"
+                    }, {
+                        value: "File a bug.",
+                        href: "https://github.com/w3ctag/webarch/issues"
+                    }, {
+                        value: "Commit history.",
+                        href: "https://github.com/w3ctag/webarch/commits/gh-pages"
+                    }
+                ]
+            }
+        ],
+        inlineCSS: true,
+        noIDLIn: true,
+        noLegacyStyle: false,
+        localBiblio: {
+            "EXTLANG": {
+                "authors": [
+                    "T. Berners-Lee",
+                    "D. Connolly"
+                ],
+                "href": "http://www.w3.org/TR/1998/NOTE-webarch-extlang-19980210",
+                "title": "Web Architecture: Extensible Languages",
+                "date": "10 February 1998",
+                "status": "NOTE",
+                "publisher": "W3C"
+            },
+            "Eng90": {
+                "authors": [
+                    "D. C. Engelbart"
+                ],
+                "href": "http://www.bootstrap.org/augment/AUGMENT/132082.html",
+                "title": "Knowledge-Domain Interoperability and an Open Hyperdocument System",
+                "date": "June 1990"
+            },
+            "IANASchemes": "IANA's &lt;a href=\"http://www.iana.org/assignments/uri-schemes\"&gt;online registry of URI Schemes&lt;/a&gt; is available at http://www.iana.org/assignments/uri-schemes.",
+            "QA": {
+                "aliasOf": "qaframe-spec"
+            },
+            "XMLNS": {
+                "aliasOf": "xml-names11"
+            },
+            "RDFXML": {
+                "aliasOf": "rdf-syntax-grammar"
+            },
+            "OWL10": {
+                "aliasOf": "owl-ref"
+            },
+            "RDDL": {
+                "authors": [
+                    "J. Borden",
+                    "T.Bray"
+                ],
+                "href": "http://www.tbray.org/tag/rddl/rddl3.html",
+                "title": "Resource Directory Description Language (RDDL)",
+                "date": "18 February 2002"
+            }
         }
-    ],
-    inlineCSS: true,
-    noIDLIn: true,
-    noLegacyStyle: false,
-    localBiblio: {
-        "EXTLANG": {
-            "authors": [
-                "T. Berners-Lee",
-                "D. Connolly"
-            ],
-            "href": "http://www.w3.org/TR/1998/NOTE-webarch-extlang-19980210",
-            "title": "Web Architecture: Extensible Languages",
-            "date": "10 February 1998",
-            "status": "NOTE",
-            "publisher": "W3C"
-        },
-        "Eng90": {
-            "authors": [
-                "D. C. Engelbart"
-            ],
-            "href": "http://www.bootstrap.org/augment/AUGMENT/132082.html",
-            "title": "Knowledge-Domain Interoperability and an Open Hyperdocument System",
-            "date": "June 1990"
-        },
-        "IANASchemes": "IANA's &lt;a href=\"http://www.iana.org/assignments/uri-schemes\"&gt;online registry of URI Schemes&lt;/a&gt; is available at http://www.iana.org/assignments/uri-schemes.",
-        "QA": {
-            "aliasOf": "qaframe-spec"
-        },
-        "XMLNS": {
-            "aliasOf": "xml-names11"
-        },
-        "RDFXML": {
-            "aliasOf": "rdf-syntax-grammar"
-        },
-        "OWL10": {
-            "aliasOf": "owl-ref"
-        },
-        "RDDL": {
-            "authors": [
-                "J. Borden",
-                "T.Bray"
-            ],
-            "href": "http://www.tbray.org/tag/rddl/rddl3.html",
-            "title": "Resource Directory Description Language (RDDL)",
-            "date": "18 February 2002"
-        }
-    }
     };
+
+    //toggle dels and inserts
+    (function () {
+        var toggleControl,
+            delsIns;
+
+        //default to not show diffs
+        if(localStorage.showDiffs === undefined || localStorage.showDiffs === ""){
+          localStorage.showDiffs = false;
+        }
+
+        //wait for respect to finish processing 
+        respecEvents.sub('end-all', function () {
+            var dels = document.querySelectorAll('del'),
+                inserts = document.querySelectorAll('ins');
+            delsIns = [{
+                    list: dels,
+                    class: 'del'
+                }, {
+                    list: inserts,
+                    class: 'ins'
+                }
+            ];
+            toggleControl = document.querySelector('#toggleControl');
+            toggleControl.addEventListener('change', function () {
+                localStorage.showDiffs = toggleControl.checked;
+                toggleDiffs(); 
+            });
+            toggleDiffs();
+            toggleControl.checked = (localStorage.showDiffs === "true")? true : false;
+            if(!toggleControl.checked){
+              toggleDiffs();
+            }
+        });
+
+        function toggleDiffs() {
+            for (var i = delsIns.length - 1; i >= 0; i--) {
+                var list = delsIns[i].list;
+                var cssClass = delsIns[i].class;
+                for (var j = list.length - 1; j >= 0; j--) {
+                    var element = list[j];
+                    if (element.classList) {
+                        element.classList.toggle(cssClass);
+                    }
+                }
+            }
+        }
+    }());
     </script>
-    <link href="editorial.css" rel="stylesheet" type="text/css">
+    <link href="editorial.css" rel="stylesheet">
   </head>
   <body>
     <section id="abstract">
       <p>
         The World Wide Web uses relatively simple technologies with sufficient
         scalability, efficiency and utility that they have resulted in a
-        remarkable <span class="del">information space of interrelated
-        resources</span><span class="ins">interconnected space of information
-        and services</span>, growing across languages, cultures<span class=
-        "del">,</span> and media. In an effort to preserve these properties of
-        the <span class="del">information</span> space as the technologies
-        evolve, this architecture document discusses the core design components
-        of the Web. They are identification of <span class=
-        "del">resources</span><span class="ins">information and
-        services</span>, representation of <span class="del">resource
-        state</span><span class="ins">information state and service
-        requests</span>, and the protocols that support the interaction between
-        agents <span class="del">and resources</span> in the space. We relate
-        core design components, constraints, and good practices to the
-        principles and properties they support.
+        remarkable <del>information space of interrelated
+        resources</del><ins>interconnected space of information and
+        services</ins>, growing across languages, cultures<del>,</del> and
+        media. In an effort to preserve these properties of the
+        <del>information</del> space as the technologies evolve, this
+        architecture document discusses the core design components of the Web.
+        They are identification of <del>resources</del><ins>information and
+        services</ins>, representation of <del>resource
+        state</del><ins>information state and service requests</ins>, and the
+        protocols that support the interaction between agents <del>and
+        resources</del> in the space. We relate core design components,
+        constraints, and good practices to the principles and properties they
+        support.
       </p>
+      <div class="note">
+        <p>
+          <label><input type="checkbox" id="toggleControl"> Check the box to
+          highlights most differences from the first edition of <a href=
+          "http://www.w3.org/TR/webarch/">AWWW</a>.</label>
+        </p>
+        <p>
+          Deletions <samp class="sampdel">are presented like this</samp> and
+          insertions <samp class="sampins">are presented like this</samp>.
+        </p>
+      </div>
     </section>
     <section id="sotd">
-      <p class="ins">
-        This is an unofficial draft and work in progress. It has no official
-        standing: rather it represents a trial balloon to help the <a href=
-        "http://www.w3.org/2001/tag/">TAG</a> decide whether to proceed with a
-        second edition of <a href="http://www.w3.org/TR/webarch/">AWWW</a> or
-        not.
+      <p>
+        <ins>This is an unofficial draft and work in progress. It has no
+        official standing: rather it represents a trial balloon to help the
+        <a href="http://www.w3.org/2001/tag/">TAG</a> decide whether to proceed
+        with a second edition of <a href=
+        "http://www.w3.org/TR/webarch/">AWWW</a> or not.</ins>
       </p>
-      <div class="note" title="(Editorial)">
-        This draft highlights most differences from the first edition of
-        <a href="http://www.w3.org/TR/webarch/">AWWW</a>, with <span class=
-        "del">deletions presented like this</span> and <span class=
-        "ins">insertions presented like this</span>.
-      </div>
       <p>
         <em>This section describes the status of this document at the time of
         its publication. Other documents may supersede this document. A list of
@@ -153,22 +205,21 @@ var respecConfig = {
         of Volume Two as a Recommendation.
       </p>
       <p>
-        This document uses concepts and terms regarding URIs <span class=
-        "ins">in general, and <code>http:</code> URIs in particular,</span> as
-        defined by the IETF. <span class="del">In an <a href=
+        This document uses concepts and terms regarding URIs <ins>in general,
+        and <code>http:</code> URIs in particular,</ins> as defined by the
+        IETF. <del>In an <a href=
         "http://www1.ietf.org/mail-archive/web/ietf-announce/current/msg00602.html">
         18 Oct 2004 announcement</a>, the revision of RFC2396 was endorsed as
         an IETF Specification, though the latest published draft as of this
         writing is <a href=
-        "http://www.apache.org/~fielding/uri/rev-2002/rfc2396bis.html">draft-fielding-uri-rfc2396bis-07</a>.</span>
-        The <a href="#URI">[URI]</a> <span class="del">citation should reflect
-        publication of the relevant RFC in future revisions</span><span class=
-        "ins">specification is the primary normative reference for URIs in
-        general. For <code>http:</code> (and <code>https:</code>, and the HTTP
-        protocol), [[!HTTP11]] is the specification currently in force, but
-        [[!HTTPbis]], which will update it, is nearing final approval, and we
-        assume it will be in force by the time this second edition is
-        completed</span>.
+        "http://www.apache.org/~fielding/uri/rev-2002/rfc2396bis.html">draft-fielding-uri-rfc2396bis-07</a>.</del>
+        The <a href="#URI">[URI]</a> <del>citation should reflect publication
+        of the relevant RFC in future revisions</del><ins>specification is the
+        primary normative reference for URIs in general. For <code>http:</code>
+        (and <code>https:</code>, and the HTTP protocol), [[!HTTP11]] is the
+        specification currently in force, but [[!HTTPbis]], which will update
+        it, is nearing final approval, and we assume it will be in force by the
+        time this second edition is completed</ins>.
       </p>
       <div class="note" title="(Editorial)">
         The references and caveats wrt HTTP(bis) above will need to be

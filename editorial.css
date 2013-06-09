@@ -1,7 +1,24 @@
-.del { background-color: #ffbbbb }
-.del:before { content: "\002193" } /* down-arrow */
-.del:after { content: "\002193" }
-.ins { background-color: #bbffbb }
-.ins:before { content: "\002191" } /* up-arrow */
-.ins:after { content: "\002191" }
-
+del{
+    display: none;
+}
+ins, del {
+    text-decoration: none;
+}
+.sampdel, .del {
+    background-color: #ffbbbb;
+    display: inline;
+}
+.sampins, .ins {
+    background-color: #bbffbb
+}
+.sampdel:after, .sampdel:before, .del:after, .del:before {
+    /* down-arrow */
+    content:"\002193";
+}
+.sampins:after, .sampins:before, .ins:after, .ins:before {
+    /* up-arrow */
+    content:"\002191";
+}
+.sampdel, .sampins {
+    font-family: sans-serif;
+}
